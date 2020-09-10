@@ -1,0 +1,327 @@
+/*GABRIEL ROULEAU 2020*/
+
+/*Relatif a l'ensemble de la page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    color: black;    
+}
+body {
+    overflow: hidden;
+    /*cursor: none;*/
+}
+a {
+    /*cursor: none;*/
+    cursor: pointer;
+}
+
+
+::selection {
+    /*
+    background-color: #FFE95C;
+    color: black;
+    */
+    color: #FFE95C;
+}
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.mouse-listener {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+/*Galerie des projets*/
+.projects-gallery {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.projects-gallery ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.projects-gallery ul li {
+    transition: opacity 0.4s;
+}
+.projects-gallery ul li:not(:last-child) {
+    margin-right: 15vw;
+}
+.projects-gallery ul li a {
+    position: relative;
+    /*cursor: pointer;*/
+}
+.projects-gallery ul li a img {
+    width: 51.5vw;
+    transition: filter 0.4s;
+}
+.projects-gallery ul li a:hover img {
+    filter: brightness(80%);
+}
+.projects-gallery ul li a h1 {
+    position: absolute;
+    text-align: start;
+    width: 25%;
+    height: 180%;
+    top: -14.3vw;
+    left: -15%;
+    transform: rotate(-90deg);
+    font-weight: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.4vw;
+    transition: color 0.2s;
+}
+.projects-gallery ul li a:hover h1 {
+    color: black;
+}
+
+/*Fleches de navigation*/
+.navigation-arrows {
+    width: 100%;
+    padding: 0px 2vw;
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+.navigation-arrows .left-arrow {
+    height: 3vw;
+}
+.navigation-arrows .right-arrow {
+    height: 3vw;
+    transform: rotate(180deg);
+}
+
+
+/*Curseur styled dont la base provient de
+  DesignCourse (https://www.youtube.com/watch?v=rfpRZ2t_BrQ)*/
+.cursor-parent {
+    pointer-events: none;
+    position: fixed;
+    top: -1000px;
+    z-index: 10;
+}
+.cursor {
+    pointer-events: none;
+    width: 1.041vw;
+    height: 1.041vw;
+    position: relative;
+    border: solid 0.625vw #186BF0;
+    border-radius: 50%;
+    transition-duration: 50ms;
+    transition-timing-function: ease-out;
+}
+.cursor::after {
+    content: "";
+    width: 1.041vw;
+    height: 1.041vw;
+    position: absolute;
+    z-index: -1;
+    top: -0.9375vw;
+    left: -0.9375vw;
+    border: solid 0.4167vw rgb(69, 134, 240);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: cursorAnim 0.8s infinite alternate;
+}
+@keyframes cursorAnim {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(0.4);
+    }
+}
+.expand {
+    animation: cursorAnim3 0.5s forwards;
+    border: solid 1px #FFE95C;
+}
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/*Panel de description des projets*/
+.project-description {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    padding: 12% 15% 0px 15%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/*Partie a propos*/
+.project-description .about-informations {
+    height: 21.09vw;
+    width: 100%;
+    margin-bottom: 12vw;
+}
+.project-description .about-informations .about-description {
+    font-weight: 500;
+    font-size: 1.145vw;
+    line-height: 1.667vw;
+    text-align: justify;
+    color: rgb(65, 65, 65);
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.project-description .about-informations .about-title {
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: #186BF0;
+    margin-bottom: 1.979vw;
+    opacity: 1;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.project-description .about-informations ul {
+    display: flex;
+    align-items: center;   
+    margin-top: 1.979vw;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.project-description .about-informations ul li:not(:first-child){
+    margin-left: 15px;
+}
+.project-description .about-informations ul img {
+    width: 1.3vw;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.project-description .about-informations ul img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+/*Partie informations projets*/
+.project-description .grid {
+    height: 21.09vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 12vw;
+}
+.project-description .informations {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+.project-description h1{
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: #186BF0;
+    margin-bottom: 1.979vw;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.project-description .informations h2 {
+    font-weight: 500;
+    font-size: 1.04vw;
+    color: #929292;
+    margin-bottom: 0.52vw;
+    letter-spacing: 0.2vw;
+}
+.project-description .informations p {
+    font-size: 0.937vw;
+}
+.project-description .informations li {
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.project-description .informations li:not(:first-child) h2 {
+    margin-top: 1.458vw;
+}
+/*Partie description*/
+.project-description .description {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    font-weight: 500;
+    font-size: 1.145vw;
+    line-height: 1.667vw;
+    color: rgb(65, 65, 65);
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+/*Projet suivant*/
+.project-description .next-project {
+    display: table; 
+    text-align: center;
+    margin: 16% auto;
+}
+.project-description .next-project p {
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell; 
+    width: 25%;
+    color: grey;
+    font-size: 2.343vw;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.project-description .next-project a:hover p {
+    color: black;
+}
+.project-description .next-project p .next-project-arrow {
+    color: grey;
+    padding-left: 0px;
+    transition: padding-left 0.6s, color 0.6s;
+}
+.project-description .next-project a:hover .next-project-arrow {
+    padding-left: 10px;
+    color: black;
+}
+.project-description .next-project p .next-project-name {
+    color: white;
+    font-weight: normal;
+    transition: color 0.7s;
+}
+.project-description .next-project a:hover .next-project-name {
+    color: rgb(82, 82, 82);
+}
+/*Galerie d'images*/
+.project-description .gallery {
+    text-align: center;
+}
+.project-description .gallery img{
+    width: 100%;
+}
+.project-description .gallery li:first-child img {
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.project-description .gallery li:not(:last-child) img  {
+    margin-bottom: 5%;
+}
