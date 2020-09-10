@@ -1,0 +1,364 @@
+/***
+		Crée par Gabriel Rouleau (Ckyre), initialement pour candidater a des formations sur Parcoursup.
+		Certaines ressources proviennent de codemiyu.com et css-tricks.com, notament la barre de naviagtion et certaines images.
+***/
+@import url('https://fonts.googleapis.com/css?family=Bangers|Roboto&display=swap');
+
+/* General settings */
+body{
+	font-family : 'Roboto', sans-serif;
+	
+	overflow-x : hidden;
+	margin : 0px;
+	padding : 0px;
+	
+	justify-content : center;
+	align-items : center;
+}
+::selection
+{
+	background-color:#ed1539;
+	color:white;
+}
+::-moz-selection
+{
+	background-color:#ed1539;
+	color:white;
+}
+
+/* Patrie 1 : Introduction */
+.introduction
+{
+	height : auto;
+	width : 100%;
+	max-width: 100%;
+	background : url('images/page-top.jpg') no-repeat; 
+	background-size : 100vw auto;
+	padding-bottom : 35%;
+}
+
+/* Patrie 2 : Projets */
+.projets
+{
+	height : auto;
+	width : 100%;
+	max-width: 100%;
+	background : url('images/page-mid.jpg') no-repeat; 
+	background-size : 100% auto;
+	padding-bottom : 116%;
+}
+.projets .contentAlign
+{
+	display: block;
+	padding-top : 41%;
+}
+.projets .image0
+{
+	width: 65vw;
+	display: block;
+	margin : 0 auto;
+	text-align : center;
+}
+.projets .image1
+{
+	cursor : pointer;
+	display: block;
+	width : 33%; 
+	height : 33%;
+	margin : 0 auto;
+	text-align : center;
+	transition: all 0.2s ease-out;
+}
+.projets .image1:hover
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.projets .contentAlign .subContentAlign0
+{
+	width : 100%;
+	position : absolute;
+	margin-top : 20%;
+	padding-top : 0px;
+	text-align: center;
+}
+.projets .contentAlign .subContentAlign1
+{
+	width : 100%;
+	position : absolute;
+	margin-top : 57.5%;
+	padding-top : 0px;
+    text-align: center;
+}
+.projets .contentAlign .subContentAlign2
+{
+	width : 100%;
+	pointer-events:none;
+	position : absolute;
+	margin-top : 54%;
+	padding-top : 39%;
+	padding-bottom: 10%;
+	text-align: center;
+}
+.projets .contentAlign .subContentAlign2 a{
+	pointer-events:auto;
+}
+.projets .image2 img{
+	width : 30%; 
+	border: dashed black;
+}
+.projets .image2:hover
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.projets .youtubeFrame
+{
+	width : 25vw; 
+	height : 30vh; 
+	display: inline-block; 
+	margin : 0 auto;
+	transition: all 0.2s ease-out;
+	background-color : grey;
+}
+.projets .youtubeFrame:hover
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Patrie 3 : Competences */
+.competences
+{
+	height : auto;
+	width : 100%;
+	max-width: 100%;
+	background : url('images/page-mid2.jpg') no-repeat; 
+	background-size : 100% auto;
+	margin-top: 10%;
+	padding-bottom : 50%;
+}
+
+/* Patrie 4 : Contact */
+.contact
+{
+	height : auto;
+	width : 100%;
+	max-width: 100%;
+	background : url('images/page-bottom.jpg') no-repeat; 
+	background-size : 100% auto;
+	padding-bottom : 49%;
+}
+.contact .linksContainer
+{
+	position : absolute;
+	width : 100vw;
+	height : 10px;
+	margin-top: 19.1%;
+}
+.contact .linksContainer .mailto
+{
+	color : transparent;
+	margin-left : 16.5vw;
+	padding : 0 7% 9.25% 7%;
+}
+.contact .linksContainer .itch
+{
+	color : transparent;
+	margin-left : 39vw;
+	padding : 1% 7% 10% 10%;
+}
+
+/* Navigation Menu */
+.wrapper
+{
+	z-index : 50;
+	position : fixed;
+	padding : 0px;
+	top : 1.5%;
+	left : 50%;
+	transform : translate(-50%, -1%);
+}
+.tabs
+{
+	font-size:15px;
+	padding:0px;
+	list-style:none;
+	background:#fff;
+	box-shadow:0px 5px 20px rgba(0,0,0,0.17);
+	display:inline-block;
+	border-radius:50px;
+}
+.tabs a{
+	text-decoration:none;
+	color: #777;
+	text-transform:uppercase;
+	padding:10px 20px;
+	display:inline-block;
+	position:relative;
+	z-index:10;
+	transition-duration:0.6s;
+}
+.tabs a.active
+{
+	color:#fff;
+}
+.tabs a i
+{
+	margin-right:5px;
+}
+.tabs .selector
+{
+	height:100%;
+	display:inline-block;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:9;
+	border-radius:50px;
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	/*base colors : #05abe0 and #8200f4*/
+	background: #e6101e;
+	background: -moz-linear-gradient(45deg, #e6101e 0%, #e6107f 100%);
+	background: -webkit-linear-gradient(45deg, #e6101e 0%,#e6107f 100%);
+	background: linear-gradient(45deg, #e6101e 0%,#e6107f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6101e', endColorstr='#e6107f',GradientType=1 );
+}
+
+/*Partie 1 (suite)*/
+.textIntro
+{
+	z-index: 1;
+	margin: 0 100px;
+	text-align:center;
+	font-size: 24px;
+	color:white;
+	filter:invert(0);
+	text-shadow: 2px 1px 2px black; 
+}
+.introduction .scrollButton{
+	z-index: 10;	
+	height: 10%;
+	width: 10%; 	
+	display: block;	
+	margin-top: 6%;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;	
+	transition : all 0.2s;
+}
+.introduction .scrollButton:hover
+{
+	-webkit-filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));
+}
+.introduction h1
+{
+	font-family : 'Bangers', cursive; 
+	letter-spacing : 3px; 
+	color : white; 
+	text-align : center; 
+	background-color : #ff0a3b; 
+	font-size : 47px;
+	text-shadow : 2px 1px 2px black; 
+	width : 330px; 
+	margin : 12% auto 6% auto;
+}
+
+/* Look at mouse Div effet */
+.introduction .lookAtContainer
+{
+	display : flex;
+	font-family : 'Righteous', cursive;
+	margin-left : 200px;
+	margin-right : 200px;
+}
+#container 
+{
+	perspective: 25px;
+	margin : 7% auto 0px auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 1282px){
+
+}
+@media only screen and (max-width: 1160px){
+    #inner { 
+ 		display:none;
+	}
+	.wrapper{
+		display : none;
+	}
+	.contact .linksContainer .itch
+	{
+		margin-left : 63.5vw;
+		padding : 2% 15% 10% 15%;
+	}
+	.contact .linksContainer .mailto
+	{
+		margin-left : 8.5vw;
+		padding : 0 15% 10% 15%;		
+	}
+}
+@media only screen and (min-width: 1160px){
+	.mobileIntro{
+		  display:none;
+	}
+}
+@media only screen and (max-width: 600px){
+	.mobileIntro .textIntro{
+		font-size:10px;
+	}
+	.contact .linksContainer .itch
+	{
+		margin-left : 60vw;
+		padding : 6% 15% 6% 15%;
+	}
+	.mobileIntro h2{
+		font-size : 20px;
+	}
+}
+@media only screen and (max-width: 350px){
+	.mobileIntro .textIntro{
+		font-size:5px;
+	}
+
+}
+@media only screen and (max-width: 900px){
+	.projets .youtubeFrame
+	{
+		width : 100px;
+		height : 60px;
+	}
+}
+#inner 
+{
+  width: 48em;
+  border-radius:10px;
+  height: 48em;
+  background-color: transparent;
+  background-image: url("images/lune.png");
+  background-size : cover;
+  
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+
+/*Texte d'intro pour mobile*/
+.mobileIntro
+{
+	text-align : center;
+	padding-top : 10px;
+}
+.mobileIntro h2
+{
+	font-family : 'Bangers', cursive; 
+	letter-spacing : 3px; 
+	color : white; 
+	text-align : center; 
+	background-color : #ff0a3b; 
+	font-size : 47px;
+	text-shadow : 2px 1px 2px black; 
+	width : 330px; 
+	margin : 12% auto 6% auto;
+}

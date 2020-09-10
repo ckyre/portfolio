@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Freelance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Modals scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</head>
+<body>
+    <!--Alert for mobile devices-->
+    <div class="mobileAlert" id="alertMobile">
+        <div class="modalContainer">
+            <p class="modalTitle">Ce site peut ne pas fonctionner correctement</p>
+            <p class="modalContent">
+                Ce site n'a pas encore été adapté pour votre taille d'écran. Il peut donc y avoir des problèmes d'affichage.
+            </p>
+            <a id="mobileAlertBtn" onclick="closeAlert()" style="margin-top:5%;">OK</a>
+        </div>
+    </div>
+    <!--Section : presentation-->
+    <section id="presentation" class="sl1">
+        <div class="header">
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#articles">Arcticles</a></li>
+            </ul>
+        </div>
+        <div class="text">
+            <h1>Gabriel Rouleau</h1>
+            <p>
+                Bienvenue sur mon site ! J'ai créé ce site pour m'entrainer.
+                Je me suis placé dans la peau d'un Freelance <b>web designer</b> et j'ai imaginé un site pour vendre mes services.
+                Je n'ai utilisé aucune aide extérieure pour ce site (si ce n'est des tutos 😉).
+            </p>
+        </div>
+        <div class="mobileText">
+            <h1>Gabriel Rouleau</h1>
+            <p>
+                Bienvenue sur mon site ! J'ai créé ce site pour m'entrainer.
+                Je me suis placé dans la peau d'un Freelance <b>web designer</b> et j'ai imaginé un site pour vendre mes services.
+                Je n'ai utilisé aucune aide extérieure pour ce site (si ce n'est des tutos 😉).
+            </p>
+        </div>
+        <img class="background" src="img/window.png" alt=""/>
+        <div class="btnContainer">
+            <a href="#portfolio"><img class="image1" src="img/arrow.png" alt=""/></a>
+        </div>
+    </section>
+    <!--Section : portfolio-->
+    <section id="portfolio" class="sl2">
+        <div class="bg" id="portfolioBG"></div>
+        <h1 id="portfolioTitle">Portfolio</h1>
+        <p>
+            Hey ! Le site est encore en construction. 
+            Vous pouvez aller sur la <a href="https://gabrielrouleau.fr">page dédiée à mon portfolio</a> 😅.
+        </p>
+    </section>
+    <!--Section : articles-->
+    <section id="articles" class="sl3">
+        <div class="bg" id="articlesBG"></div>
+        <h1 id="articlesTitle">Articles</h1>
+        <h2>Que cherchez-vous ?</h2>
+        <ul class="articlesList">
+            <li>
+                <a href="#modal1" rel="modal:open">
+                    <h3>Site web</h3>
+                    <p>Un site pour votre entreprise ?<br>Un blog ?</p>
+                </a>
+            </li>
+            <li>
+                <a href="#modal1" rel="modal:open">
+                    <h3>Application</h3>
+                    <p>Une application pour Windows, IOS ou Android ?<br>Les trois 😇 ?</p>
+                </a>
+            </li>
+        </ul>
+        <div class="btnContainer">
+            <a href="#presentation"><img class="image1" src="img/arrow.png" alt=""/></a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <!--Modals-->
+    <div id="modal1" class="modal">
+        <p class="modalTitle">Désolé !</p>
+        <p class="modalContent">
+            Le site étant en construction, cette section n'est pas complète.
+            À l'avenir le site devrait mettre en relation le client avec le web designer.
+        </p>
+    </div>
+</body>
+</html>

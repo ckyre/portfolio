@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*Selection settings*/
+::selection{
+    background-color: tomato;
+    color:white;
+}
+
+
+/*First Section*/
+.sl1{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 1fr 150px;
+}
+.sl1 .header{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    margin-right: 2%;
+}
+.sl1 .header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;      
+    margin: 2% 30% 0% 30%;
+    font-size: 20px;
+}
+.sl1 .header a{/*Menu elments*/
+    position: relative;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    padding-bottom: 5px;
+}
+/*Menu elements animation*/
+/*by Tobias Ahlin Bjerrome*/
+/*https://tobiasahlin.com/blog/css-trick-animating-link-underlines/*/
+.sl1 .header a:hover{
+    color:black;
+}
+.sl1 .header a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(34, 34, 34);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+.sl1 .header a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}   
+.sl1 .text{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-items: center;  
+}
+.sl1 .text h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 68px;
+    line-height: 88px;
+    margin-left: 139px;
+    margin-top: 18%;
+    margin-bottom: 4%;
+}
+.sl1 .text p{
+    overflow-wrap: break-word;
+    position: absolute;
+    width: 627px;
+    height: 122px;
+    margin-left: 143px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+}
+.sl1 .background{ /*Background image*/
+    grid-row: 2/3;
+    grid-column: 2/3;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.25);
+    margin-left: 5%;
+    margin-top: 15%;
+    opacity: 0;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-name: imageApparition;
+}
+@media screen and (min-width:1500px){
+    .mobileText{
+        display: none;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .sl1{
+        display: block;
+    }
+    .sl1 .background{
+        display: none;
+    }
+    .sl1 .text{
+        display: none;
+    }
+    .mobileText{
+        position: inline;
+        text-align: center;
+        margin-top: 7vh;
+    }
+    .mobileText h1{
+        font-size: 40px;
+        padding-bottom: 2vh;
+    }
+    .mobileText p{
+        font-size: 20px;
+        padding-bottom: 2vh;
+    }
+  }
+
+.sl1 .btnContainer{ /*Scroll button*/
+    grid-row: 3/4;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sl1 .btnContainer a{
+    display: inline-block;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+.sl1 .btnContainer a:hover{
+    opacity: 0.9;
+}
+.sl1 .btnContainer img{
+    width: 1.5vw;
+}
+
+/*Animations*/
+@keyframes BGOuverture {
+    from {
+        height: 100%;
+    } 
+    to {
+        height: 13vh;
+    }
+}
+@keyframes TitreOuverture {
+    from {
+        padding-top: 20%;
+    } 
+    to {
+        padding-top: 1%;
+    }
+}
+@keyframes imageApparition {
+    from {
+        margin-left: 5%;
+        margin-top: 15%;
+        opacity: 0;
+    } 
+    to {
+        margin-left: 10%;
+        margin-top: 8%;
+        opacity: 1;
+    }
+}
+
+/*Second section*/
+.sl2{
+    width: 100%;
+    height: 100vh;
+}
+.sl2 .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0px;
+    background: linear-gradient(43deg, rgb(255, 99, 71) 36%, rgba(252,67,34,1) 100%); 
+    
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-name: BGOuverture;
+    animation-play-state: paused;
+}
+.sl2 h1{
+    display: flex;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    /*align-items: center;*/
+    padding-top: 20%;
+    text-align: center;
+
+    color: white;
+    font-size: 72px;
+
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-name: TitreOuverture;
+    animation-play-state: paused;
+}
+.sl2 p{
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 7%;
+}
+.sl2 a{
+    color:black;
+    font-weight: bold;
+}
+
+/*Third section*/
+.sl3{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.sl3 .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0px;
+    background: linear-gradient(43deg, rgba(17,50,232,1) 0%, rgba(45,72,222,1) 100%); 
+
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-name: BGOuverture;
+    animation-play-state: paused;
+}
+.sl3 h1{
+    display: flex;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    /*align-items: center;*/
+    padding-top: 20%;
+    text-align: center;
+
+    color: white;
+    font-size: 72px;
+
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-name: TitreOuverture;
+    animation-play-state: paused;
+}
+.sl3 h2{
+    text-align: center;
+    padding-top: 7%;
+    z-index: 0;
+
+    color:black;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 61px;
+}
+.sl3 ul {
+    margin-top: 3%;
+    z-index: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.sl3 ul li{
+    border: 2px dashed rgb(109, 109, 109);
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 320px;
+    height: 400px;
+
+    transition: all 0.2s;
+}
+.sl3 li:first-child {
+    margin: 0 5% 0 auto;
+}
+.sl3 li:last-child {
+    margin: 0 auto 0 5%;
+}
+.sl3 li:last-child a p {
+    padding-bottom: 26%;
+}
+.sl3 li:first-child a p {
+    padding-bottom: 38%;
+}
+.sl3 ul li:hover{
+    border-color: black;
+}
+.sl3 ul a{
+    color: black;
+    text-decoration: none;
+    overflow: auto;
+}
+.sl3 ul a h3{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 59px;
+    text-align: center;
+    padding-top: 15%;
+}
+.sl3 ul a p{
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 37px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.75);
+
+    padding-top: 18%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.sl3 ul li:hover p{
+    transition: all 0.2s;
+    color: black;
+}
+
+.sl3 .btnContainer{
+    text-align: center;
+    margin-top: 6%;
+    width: 100%;
+}
+.sl3 .btnContainer a{
+    opacity: 0.6;
+    padding-top: 10px;
+    transition: all 0.2s;
+}
+.sl3 .btnContainer a:hover{
+    opacity: 0.9;
+}
+.sl3 .btnContainer img{
+    transform: rotate(180deg);
+    width: 1.5vw;
+}
+
+/*Modals*/
+.modal{
+    z-index: 5 !important; 
+}
+.modal .modalTitle{
+    padding-bottom: 5%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.modal .modalContent{
+    font-size: 20px;
+    padding: 0% 7% 5% 0%;
+}
+@media screen and (max-width: 1500px) {
+    .mobileAlert{
+        display: block !important;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .mobileAlert{
+        display: none !important;
+    }
+}
+/*Mobile alert*/
+.mobileAlert{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:99;
+    background-color: rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+.mobileAlert .modalContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    background-color: white;
+    border-radius: 5px;
+}
+.mobileAlert .modalTitle{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10% 0% 5% 0%;
+}
+.mobileAlert .modalContent{
+    text-align: center;
+    font-size: 20px;
+}
+.mobileAlert a {
+    color: #fff;
+    cursor: pointer;
+    background:tomato;
+    padding: 1.45rem 2.6rem;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 4px;
+    transition-duration: .25s;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.666;   
+}
+.mobileAlert a:hover {
+    background:rgb(22, 20, 21);
+}

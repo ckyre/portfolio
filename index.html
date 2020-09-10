@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Rouleau Gabriel</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!-- Menu barre -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+	<!--Barre de navigation-->
+	<div class="wrapper">
+		<nav class="tabs">
+			<div class="selector"></div>
+			<a href="#pres" class="active">Présentation</a>
+			<a href="#proj">Projets</a>
+			<a href="#comp">Compétences</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</div>
+	<!--Script Menu-->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+	<!--Partie 1-->
+	<div class="introduction" id="pres">
+		<!--Texte d'introduction-->
+		<div class="mobileIntro">
+			<h2>Gabriel Rouleau</h2>
+			<p class="textIntro">
+				Je suis un jeune passionné de <a style="background:#0055ff;">programmation et de design</a>. 
+				J'aime parcourir le monde infini de l'infographie et faire marcher mon imagination. Je vous invite donc à
+				découvrir les differents <a style="background:#0055ff;">projets que j'ai réalisés</a> jusqu'à aujourd'hui !
+			</p>
+		</div>
+		<!--Lune-->
+		<div class="lookAtContainer">
+			<div id="container">
+				<div id="inner">
+					<br><br><br><br><br><br>
+					<h1>Gabriel Rouleau</h1>
+					<p class="textIntro">
+						Je suis un jeune passionné de <a style="background:#0055ff;">programmation et de design</a>. 
+						J'aime parcourir le monde infini de l'infographie et faire marcher mon imagination. Je vous invite donc à
+						découvrir les differents <a style="background:#0055ff;">projets que j'ai réalisés</a> jusqu'à aujourd'hui !
+					</p>
+					<!--Scroll Bouton-->
+					<a href="#proj"><input class="scrollButton" type="image" src="images/scrollButton.png"></a>
+				</div>				
+			</div>
+		</div>
+		<!-- Import look at mouse script -->
+		<script  src="./rotateScript.js"></script>	
+	</div>
+
+	<!--Partie 2-->
+	<div class="projets" id="proj">
+		<div class="contentAlign">
+			<img class="image0" src="images/imagesOverview.jpg"/>
+			<div class="subContentAlign0">
+				<img id="resizable" class="image1" src="images/scene3D.jpg" /> <!--onclick="window.open('images/scene3D.jpg', '_blank');"-->
+			</div>
+			<div class="subContentAlign1">
+				<iframe class="youtubeFrame" src="https://www.youtube.com/embed/ZUrel2RRRk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="subContentAlign2">
+				<a class="image2" href="freelance/" target="_blank"><img src="images/freelanceOverview.png"/></a>
+			</div>
+		</div>
+	</div>
+
+	<!--Partie 3-->
+	<div class="competences" id="comp">
+	</div>
+
+	<!--Partie 4-->
+	<div class="contact" id="contact">
+		<div class="linksContainer">
+			<a class="mailto" href="mailto:ckyre.game@gmail.com">a</a>
+			<a class="itch" href="https://ckyre.itch.io/" target="_blank">a</a>
+		</div>
+	</div>
+	
+</body>
+</html>
