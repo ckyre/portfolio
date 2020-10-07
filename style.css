@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700&family=Sansita+Swashed:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+/* Commons */
+::selection {
+    color: white;
+    background-color: #EB364B;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #EB364B;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 43.2px; /* 18 (corps) * 2.4 */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 30.6px; /* 18 (corps) * 1.7 */
+}
+
+.unselectable {
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Active */
+.nav-link.active {
+    text-decoration: underline;
+}
+
+.project.active {
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    width: 50vw;
+    padding: 70px;
+    top: 0;
+}
+
+/* Panels (sections) */
+.left {
+    z-index: 1;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    background-color: #FFF7D9;
+    color: #000000;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    color: #ffffff;
+}
+
+/* Header (left panel) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul .nav-link {
+    color: #464646;
+    cursor: pointer;
+}
+
+header ul .nav-link:not(:last-child) {
+    margin-right: 40px;
+}
+
+header ul .nav-link:hover {
+    color: #000000;
+}
+
+/* Content (texts on left panel) */
+.content {
+    width: 100%;
+}
+
+.content img {
+    width: 100%;
+}
+
+/* Projects list */
+.projects {
+    width: 100%;
+}
+
+.project {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    padding: 50px 30px;
+
+    background-size: cover;
+    background-color: #ffffff;
+    background-blend-mode: multiply;
+    background-position: center;
+
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.project:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.project div {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.project h1 {
+    display: block;
+    margin: auto 0;
+    pointer-events: none;
+    transition: color 0.15s;
+}
+
+.project:hover, .project.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.project:hover div, .project.active div {
+    opacity: 1;
+}
+
+.project:active h1 {
+    color: #ffffff60;
+}
