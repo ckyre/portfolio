@@ -1,83 +1,109 @@
-var projects = document.getElementsByClassName("project");
-var links = document.getElementsByClassName("nav-link");
+// Variables
+const converter = new showdown.Converter();
 
-// On click link event
-Array.prototype.forEach.call(links, function(link) {
-    link.addEventListener("click", function(e)
-    {
-        if(!e.target.classList.contains("active")) 
-        {
-            // Set links and projects to non active
-            ClearActive();
-            // Set current link to active
-            e.target.classList.add("active");
-        }
-    }, false);
-});
+const aboutHtml = "<h1>A propos</h1><p>Bienvenue ! Je m’appelle Gabriel, j'ai 18 ans et après avoir obtenu un bac S, je suis actuellement en première année de DUT MMI à Bordeaux. J’aime avant tout développer des jeux, ce qui m’a permis d’acquérir un grand nombre de compétences. De la programmation orientée objet, au graphisme en passant par le game design et le développement web. Je vous propose de découvrir les compétences que j’ai à vous offrir à travers mes projets !</p><p>Mon ambition est d’innover et de proposer des nouvelles expériences que ce soit sur le plan narratif ou sur celui du gameplay. Je ne connais pas encore la place que j’aimerais occuper professionnellement dans la longue chaine de développement d’un jeu vidéo. Un stage dans un studio de développement de jeux me permettrait de me confronter à la réalité de l’industrie et je pourrais vous apporter ma totale motivation. Si vous êtes intéressé vous pouvez <a onclick='ShowContent($(\".nav-link:not(:first-child)\").get(0));'>me contacter ici</a>.</p>";
+const contactHtml = "<h1>Contact</h1><p>Si mon profil vous intéresse, n'hésitez pas à me contacter par mail, LinkedIn ou Twitter pour que nous puissions discuter.</p><p>Gabriel Rouleau<br><a href=\"mailto:ckyre.game@gmail.com\">ckyre.game@gmail.com</a></p><div class=\"inline\"><a href=\"https://twitter.com/Ckyre1\"><img src=\"assets/images/twitter.svg\" alt=\"\"></a><a href=\"https://www.linkedin.com/in/gabriel-rouleau-a9b7671b7/\"><img src=\"assets/images/linkedin.svg\" alt=\"\"></a></div>";
 
-// On click project event
-Array.prototype.forEach.call(projects, function(project) {
-    project.addEventListener("click", function(e)
-    {
-        if(!e.target.classList.contains("active")) 
-        {
-            // Set links and projects to non active
-            ClearActive();
-            // Set current project to active
-            e.target.classList.add("active");
-            // Show project content to left panel
-            ShowContent(GetProjectId(e.target));
-        }
-    }, false);
-});
+// On page was loaded
+function OnLoaded () {
+    setTimeout(function () {
+        $(".bg-image").css("opacity", "0.05");
+        $("header").css("opacity", "1");
+        $(".face-img").css("opacity", "1");
+        // Show about page
+        $(".content").css("opacity", "1");
+        ShowContent($(".nav-link:first-child").get(0), false);
 
+        setTimeout(function () {
+            for (let index = 0; index < $(".projects").get(0).children.length; index++)
+            {
+                setTimeout(function () {
+                    $(".projects").get(0).children[index].style.opacity = "1";
+                }, 150 * index);       
+            }
+        }, 500);
+    }, 1500);
+}
 
-// Update left panel texts
-var converter = new showdown.Converter();
-var content = document.getElementById("content");
-
-const aboutHtml = "<h1>A propos</h1> \n <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra purus tellus, sed dapibus turpis vulputate quis. Etiam scelerisque ultrices neque, at facilisis augue semper non. Vestibulum viverra aliquam felis non luctus. Phasellus varius laoreet neque ac laoreet. In ut elit vel tellus vehicula ornare in non est. Aenean rhoncus vel odio eu sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vitae turpis at dolor bibendum faucibus in nec lorem. Praesent eu sagittis lacus. Vivamus eget velit sit amet dui bibendum efficitur. Aenean sed venenatis est, non fermentum lectus. Curabitur pretium elit nunc, id dapibus risus ultrices id. Nunc ut tortor mollis, interdum tellus non, vulputate enim. Nunc vulputate mauris nec nunc rutrum, quis pellentesque metus viverra. Proin ac tellus elit. Aenean volutpat egestas purus, vel mattis dui eleifend non.</p>";
-const contactHtml = "<h1>Contact</h1> \n <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra purus tellus, sed dapibus turpis vulputate quis. Etiam scelerisque ultrices neque, at facilisis augue semper non. Vestibulum viverra aliquam felis non luctus. Phasellus varius laoreet neque ac laoreet. In ut elit vel tellus vehicula ornare in non est. Aenean rhoncus vel odio eu sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. In vitae turpis at dolor bibendum faucibus in nec lorem. Praesent eu sagittis lacus. Vivamus eget velit sit amet dui bibendum efficitur. Aenean sed venenatis est, non fermentum lectus. Curabitur pretium elit nunc, id dapibus risus ultrices id. Nunc ut tortor mollis, interdum tellus non, vulputate enim. Nunc vulputate mauris nec nunc rutrum, quis pellentesque metus viverra. Proin ac tellus elit. Aenean volutpat egestas purus, vel mattis dui eleifend non.</p>";
-
-// Show project description by id
-// ids -1 and -2 are reserved for about and contact description
-function ShowContent (id) 
+// Update left panel
+function ShowContent (from, applyAnimations = true) 
 {
-    if(id >= 0)
+    ClearActive();
+    from.classList.add("active");
+    id = GetProjectId(from);
+    if(applyAnimations) 
     {
-        content.innerHTML = converter.makeHtml(db[id][3]);
+        $(".content").css("opacity", "0");
+        setTimeout(function () {
+            $(".left").scrollTop(0);
+            if(id >= 0)
+            {
+                $(".content").html(converter.makeHtml(descriptions[id]));
+            }else 
+            {
+                if(id == -1)
+                {
+                    $(".content").html(aboutHtml);
+                }else if (id == -2) 
+                {
+                    $(".content").html(contactHtml);
+                }
+            }
+            $(".content").css("opacity", "1");
+        } , 500);
     }else 
     {
-        if(id == -1)
+        $(".left").scrollTop(0);
+        if(id >= 0)
         {
-            content.innerHTML = aboutHtml;
-        }else if (id == -2) 
+            $(".content").html(converter.makeHtml(descriptions[id]));
+        }else 
         {
-            content.innerHTML = contactHtml;
+            if(id == -1)
+            {
+                $(".content").html(aboutHtml);
+            }else if (id == -2) 
+            {
+                $(".content").html(contactHtml);
+            }
         }
     }
 }
 
+// On click events
+Array.prototype.forEach.call($(".nav-link"), function(link) {
+    link.addEventListener("click", function(e)
+    {
+        if(e.target.classList.contains("active") == false) 
+        {
+            ShowContent(e.target);
+        }
+    }, false);
+});
+
+Array.prototype.forEach.call($(".project"), function(project) {
+    project.addEventListener("click", function(e)
+    {
+        if(e.target.classList.contains("active") == false) 
+        {
+            ShowContent(e.target);
+        }
+    }, false);
+});
+
+// Useful functions
 function GetProjectId(element)
 {
-    var i = 0;
-    while(element.classList[i] == "project" || element.classList[i] == "unselectable" || element.classList[i] == "active") 
-    {
-        i++;
-    }
-    return parseInt(element.classList[i]);
+    return parseInt(element.dataset["id"]);
 }
 
 function ClearActive () 
 {
-    Array.prototype.forEach.call(projects, function(project) {
+    Array.prototype.forEach.call($(".project"), function(project) {
         project.classList.remove("active");
     });
 
-    Array.prototype.forEach.call(links, function(link) {
+    Array.prototype.forEach.call($(".nav-link"), function(link) {
         link.classList.remove("active");
     });
 }
-
-// Show about page
-ShowContent(-1);

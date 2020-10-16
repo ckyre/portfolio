@@ -1,16 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700&family=Sansita+Swashed:wght@400;600&display=swap');
+/* Font faces */
+@font-face {
+    /* Previous : Piazzola */
+    font-family: "Open Sans";
+    src: url(assets/fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+}
 
+@font-face {
+    font-family: "Open Sans";
+    src: url(assets/fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Sansita Swashed";
+    src: url(assets/fonts/SansitaSwashed-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Sansita Swashed";
+    src: url(assets/fonts/SansitaSwashed-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Commons */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Piazzolla', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* Commons */
 ::selection {
     color: white;
     background-color: #EB364B;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar { /* Make scroll bar invisible */
+    display: none;
 }
 
 body {
@@ -19,8 +52,10 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: #000000;
+    font-size: 1.082vw;
+    color: #EB364B;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 ul {
@@ -28,20 +63,20 @@ ul {
 }
 
 p {
-    font-size: 18px;
+    font-size: calc(0.8vw + 5px); /* 20px at width 1920px*/
     text-align: justify;
-    margin-bottom: 20px;
+    margin-bottom: 2.6vw;
 }
 
 h1 {
     font-family: 'Sansita Swashed', cursive;
-    font-size: 43.2px; /* 18 (corps) * 2.4 */
-    margin-bottom: 20px;
+    font-size: calc(2.2vw + 5px); /* 20 (corps) * 2.4 */
+    margin-bottom: 1.04vw;
 }
 
 h2 {
     font-family: 'Sansita Swashed', cursive;
-    font-size: 30.6px; /* 18 (corps) * 1.7 */
+    font-size: calc(1.5vw + 5px); /* 20 (corps) * 1.7 */
 }
 
 .unselectable {
@@ -51,36 +86,112 @@ h2 {
     user-select: none;
 }
 
-/* Active */
-.nav-link.active {
-    text-decoration: underline;
+/* Specific classes */
+.inline { /* List of link image (like socials networks) */
+    display: flex;
+    align-items: center;
 }
 
-.project.active {
-    transform: scale(1.05);
+.inline a img {
+    width: 2.08vw;
 }
 
-/* Sections */
-section {
-    width: 50vw;
-    padding: 70px;
-    top: 0;
+.inline a:not(:last-child) img{
+    margin-right: 0.52vw;
+}
+
+.bg-image { /* Background image on left and right panels (About/Work) */
+    z-index: -2;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+    transition: opacity 0.25s;
+    pointer-events: none;
+}
+
+.face-img { /* Image at the center of the screen */
+    z-index: 2;
+    position: fixed;
+    left: 50vw;
+    bottom: 2vh;
+    transform: translate(-50%, -50%);
+    width: 5.5vw;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 /* Panels (sections) */
-.left {
+.left { /* Left panel is for project description and header */
     z-index: 1;
-    min-height: 100vh;
     position: fixed;
-    left: 0;
     background-color: #FFF7D9;
     color: #000000;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.right {
+.right { /* Right panel is for projects list */
     position: absolute;
-    right: 0;
     color: #ffffff;
+}
+
+@media (min-aspect-ratio: 1/1) { /* Width greater than height */
+    section {
+        top: 0;
+        padding: 3.64vw;
+    }
+
+    .left {
+        width: 50vw;
+        height: 100vh;
+        left: 0;
+    }
+
+    .right {
+        width: calc(50vw - (100vw - 100%));
+        right: 0;
+    }
+
+    .bg-image {
+        top: 50vh;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) { /* Height greater than width */
+    section {
+        left: 0;
+        padding: 3.64vh;
+    }
+
+    .left {
+        width: 100vw;
+        height: 50vh;
+        top: 0;
+    }
+
+    .right {
+        width: 100vw;
+        top: 50vh;
+    }
+
+    .face-img {
+        display: none;
+    }
+
+    .left .bg-image {
+        top: 50%;
+    }
+
+    .right .bg-image {
+        top: 25vh;
+    }
+}
+
+.left::-webkit-scrollbar {  /* Make scroll bar invisible */
+    display: none;
 }
 
 /* Header (left panel) */
@@ -88,7 +199,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 6.25vw;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 header ul {
@@ -96,26 +209,38 @@ header ul {
     justify-content: space-between;
 }
 
-header ul .nav-link {
+header .nav-link { /* About and contact links */
+    font-size: calc(0.75vw + 5px);
     color: #464646;
     cursor: pointer;
 }
 
-header ul .nav-link:not(:last-child) {
-    margin-right: 40px;
+header .nav-link:not(:last-child) {
+    margin-right: 2.08vw;
 }
 
-header ul .nav-link:hover {
-    color: #000000;
+header .nav-link:hover {
+    text-decoration: underline;
+}
+
+header .nav-link.active {
+    text-decoration: underline;
 }
 
 /* Content (texts on left panel) */
 .content {
     width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .content img {
     width: 100%;
+}
+
+.content a {
+    display: inline-block;
+    margin-bottom: 1.04vw;
 }
 
 /* Projects list */
@@ -128,44 +253,59 @@ header ul .nav-link:hover {
     height: 100%;
     position: relative;
     display: flex;
-    padding: 50px 30px;
+    padding: 4.4vh;
 
-    background-size: cover;
+    background-size: 100% auto;
     background-color: #ffffff;
     background-blend-mode: multiply;
     background-position: center;
 
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.6s;
+    opacity: 0;
+    transition: background-size 0.5s, background-color 0.5s, transform 0.5s, opacity 0.5s;
 }
 
 .project:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 3.7vw;
 }
 
-.project div {
+.project div { /* Contains title (and more in the futur?) */
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s;
 }
 
 .project h1 {
     display: block;
-    margin: auto 0;
+    margin: auto 0 auto 2.6vw;
     pointer-events: none;
-    transition: color 0.15s;
+    transition: margin 0.5s;
 }
 
+.project:hover h1 {
+    margin-left: 0;
+}
+
+/* Projects interaction effects */
 .project:hover, .project.active {
     background-color: rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
+    background-size: 115% auto;
+
 }
 
 .project:hover div, .project.active div {
     opacity: 1;
 }
 
-.project:active h1 {
-    color: #ffffff60;
+.project:active {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.project.active h1 {
+    margin-left: 0;
+}
+
+.project.active {
+    transform: scale(1.05);
 }
