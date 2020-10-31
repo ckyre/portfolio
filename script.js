@@ -7,22 +7,22 @@ const contactHtml = "<h1>Contact</h1><p>Si mon profil vous intéresse, n'hésite
 // On page was loaded
 window.addEventListener("load", function () {
    setTimeout(function () {
-    $(".bg-image").css("opacity", "0.05");
-    $("header").css("opacity", "1");
-    $(".face-img").css("opacity", "1");
-    // Show about page
-    $(".content").css("opacity", "1");
-    ShowContent($(".nav-link:first-child").get(0), false);
+        $(".bg-image").css("opacity", "0.05");
+        $("header").css("opacity", "1");
+        $(".face-img").css("opacity", "1");
+        // Show about page
+        $(".content").css("opacity", "1");
+        ShowContent($(".nav-link:first-child").get(0), false);
 
-    setTimeout(function () {
-        for (let index = 0; index < $(".projects").get(0).children.length; index++)
-        {
-            setTimeout(function () {
-                $(".projects").get(0).children[index].style.opacity = "1";
-            }, 150 * index);       
-        }
-    }, 500);
-}, 1500); 
+        setTimeout(function () {
+            for (let index = 0; index < $(".projects").get(0).children.length; index++)
+            {
+                setTimeout(function () {
+                    $(".projects").get(0).children[index].style.opacity = "1";
+                }, 150 * index);       
+            }
+        }, 500);
+    }, 1500); 
 });
 
 // Update left panel
