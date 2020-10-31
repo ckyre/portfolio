@@ -28,12 +28,22 @@
 <!doctype html>
 <html lang="fr">
     <head>
+        <!-- Page informations -->
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gabriel Rouleau</title>
+        <meta name="description" content="Bienvenue ! Je m’appelle Gabriel, j'ai 18 ans et après avoir obtenu un bac S, je suis actuellement en première année de DUT MMI à Bordeaux." />
         <link rel="icon" href="assets/images/commons/favicon.ico" />
+        
+        <!-- Include CSS -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- Include scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+        <script src="assets/scripts/showdown.min.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
-    <body onload="OnLoaded()">
+    <body>
         <!-- Get projects descriptions from database and store it in js array -->
         <script>var descriptions = <?php echo json_encode($descriptions); ?>;</script>
 
@@ -67,10 +77,5 @@
                 ?>
             </ul>
         </section>
-        
-        <!-- Include scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="assets/scripts/showdown.min.js"></script>
-        <script src="script.js"></script>
     </body>
 </html>

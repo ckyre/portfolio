@@ -5,25 +5,25 @@ const aboutHtml = "<h1>A propos</h1><p>Bienvenue ! Je m’appelle Gabriel, j'ai 
 const contactHtml = "<h1>Contact</h1><p>Si mon profil vous intéresse, n'hésitez pas à me contacter par mail, LinkedIn ou Twitter pour que nous puissions discuter.</p><p>Gabriel Rouleau<br><a href=\"mailto:ckyre.game@gmail.com\">ckyre.game@gmail.com</a></p><div class=\"inline\"><a href=\"https://twitter.com/Ckyre1\"><img src=\"assets/images/twitter.svg\" alt=\"\"></a><a href=\"https://www.linkedin.com/in/gabriel-rouleau-a9b7671b7/\"><img src=\"assets/images/linkedin.svg\" alt=\"\"></a></div>";
 
 // On page was loaded
-function OnLoaded () {
-    setTimeout(function () {
-        $(".bg-image").css("opacity", "0.05");
-        $("header").css("opacity", "1");
-        $(".face-img").css("opacity", "1");
-        // Show about page
-        $(".content").css("opacity", "1");
-        ShowContent($(".nav-link:first-child").get(0), false);
+window.addEventListener("load", function () {
+   setTimeout(function () {
+    $(".bg-image").css("opacity", "0.05");
+    $("header").css("opacity", "1");
+    $(".face-img").css("opacity", "1");
+    // Show about page
+    $(".content").css("opacity", "1");
+    ShowContent($(".nav-link:first-child").get(0), false);
 
-        setTimeout(function () {
-            for (let index = 0; index < $(".projects").get(0).children.length; index++)
-            {
-                setTimeout(function () {
-                    $(".projects").get(0).children[index].style.opacity = "1";
-                }, 150 * index);       
-            }
-        }, 500);
-    }, 1500);
-}
+    setTimeout(function () {
+        for (let index = 0; index < $(".projects").get(0).children.length; index++)
+        {
+            setTimeout(function () {
+                $(".projects").get(0).children[index].style.opacity = "1";
+            }, 150 * index);       
+        }
+    }, 500);
+}, 1500); 
+});
 
 // Update left panel
 function ShowContent (from, applyAnimations = true) 
