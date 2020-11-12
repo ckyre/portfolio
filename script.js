@@ -1,8 +1,6 @@
 // Variables
-const converter = new showdown.Converter();
-
 const aboutHtml = "<h1>A propos</h1><p>Bienvenue ! Je m’appelle Gabriel, j'ai 18 ans et après avoir obtenu un bac S, je suis actuellement en première année de DUT MMI à Bordeaux. J’aime avant tout développer des jeux, ce qui m’a permis d’acquérir un grand nombre de compétences. De la programmation orientée objet, au graphisme en passant par le game design et le développement web. Je vous propose de découvrir les compétences que j’ai à vous offrir à travers mes projets !</p><p>Mon ambition est d’innover et de proposer des nouvelles expériences que ce soit sur le plan narratif ou sur celui du gameplay. Je ne connais pas encore la place que j’aimerais occuper professionnellement dans la longue chaine de développement d’un jeu vidéo. Un stage dans un studio de développement de jeux me permettrait de me confronter à la réalité de l’industrie et je pourrais vous apporter ma totale motivation. Si vous êtes intéressé vous pouvez <a onclick='ShowContent($(\".nav-link:not(:first-child)\").get(0));'>me contacter ici</a>.</p>";
-const contactHtml = "<h1>Contact</h1><p>Si mon profil vous intéresse, n'hésitez pas à me contacter par mail, LinkedIn ou Twitter pour que nous puissions discuter.</p><p>Gabriel Rouleau<br><a href=\"mailto:ckyre.game@gmail.com\">ckyre.game@gmail.com</a></p><div class=\"inline\"><a href=\"https://twitter.com/Ckyre1\"><img src=\"assets/images/twitter.svg\" alt=\"\"></a><a href=\"https://www.linkedin.com/in/gabriel-rouleau-a9b7671b7/\"><img src=\"assets/images/linkedin.svg\" alt=\"\"></a></div>";
+const contactHtml = "<h1>Contact</h1><p>Si mon profil vous intéresse, n'hésitez pas à me contacter par mail ou via LinkedIn pour que nous puissions discuter. Vous pouvez aussi voir les jeux que j'ai conçu sur ma page itch.io</p><p>Gabriel Rouleau<br><a href=\"mailto:ckyre.game@gmail.com\">ckyre.game@gmail.com</a></p><div class=\"inline\"><a href=\"https://ckyre.itch.io\"><img src=\"assets/images/itchio.svg\" alt=\"\"></a><a href=\"https://www.linkedin.com/in/gabriel-rouleau-a9b7671b7/\"><img src=\"assets/images/linkedin.svg\" alt=\"\"></a></div>";
 
 // On page was loaded
 window.addEventListener("load", function () {
@@ -22,7 +20,7 @@ window.addEventListener("load", function () {
                 }, 150 * index);       
             }
         }, 500);
-    }, 1500); 
+    }, 1500);
 });
 
 // Update left panel
@@ -38,7 +36,7 @@ function ShowContent (from, applyAnimations = true)
             $(".left").scrollTop(0);
             if(id >= 0)
             {
-                $(".content").html(converter.makeHtml(descriptions[id]));
+                $(".content").html(descriptions[id]);
             }else 
             {
                 if(id == -1)
@@ -56,7 +54,7 @@ function ShowContent (from, applyAnimations = true)
         $(".left").scrollTop(0);
         if(id >= 0)
         {
-            $(".content").html(converter.makeHtml(descriptions[id]));
+            $(".content").html(descriptions[id]);
         }else 
         {
             if(id == -1)

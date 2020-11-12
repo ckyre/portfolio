@@ -1,4 +1,9 @@
 <?php
+    // $serveur = "localhost";
+    // $login = "u156942223_user";
+    // $pass = "mrTsA8GKTQnGXKYS2x7tm4K6cq6reZXd7kV";
+    // $dbName = "u156942223_portfolio";
+
     $serveur = "localhost";
     $login = "root";
     $pass = "";
@@ -9,7 +14,7 @@
         $connexion = new PDO("mysql:host=$serveur;dbname=$dbName", $login, $pass);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                                             
-        $requete = $connexion->prepare("SELECT * FROM projets");
+        $requete = $connexion->prepare("SELECT * FROM projets ORDER BY id");
         $requete->execute();
 
         $resultat = $requete->fetchall();
@@ -33,14 +38,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gabriel Rouleau</title>
         <meta name="description" content="Bienvenue ! Je m’appelle Gabriel, j'ai 18 ans et après avoir obtenu un bac S, je suis actuellement en première année de DUT MMI à Bordeaux." />
-        <link rel="icon" href="assets/images/commons/favicon.ico" />
+        <link rel="icon" href="assets/images/favicon.ico" />
         
         <!-- Include CSS -->
         <link rel="stylesheet" href="style.css">
 
         <!-- Include scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
-        <script src="assets/scripts/showdown.min.js" defer></script>
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -49,7 +53,7 @@
 
         <!-- Left section/panel -->
         <section class="left">
-            <img src="assets/images/commons/left-bg.svg" alt="" class="bg-image unselectable">
+            <img src="assets/images/left-bg.svg" alt="" class="bg-image unselectable">
             <header>
                 <h2>Gabriel</h2>
                 <ul>
@@ -63,11 +67,11 @@
         </section>
 
         <!-- Face at center -->
-        <img src="assets/images/commons/loulou.png" alt="" class="face-img">
+        <img src="assets/images/loulou.png" alt="" class="face-img">
 
         <!-- Right section/panel -->
         <section class="right">
-            <img src="assets/images/commons/right-bg.svg" alt="" class="bg-image unselectable">
+            <img src="assets/images/right-bg.svg" alt="" class="bg-image unselectable">
             <ul class="projects">
                 <?php
                     for ($i=0; $i < count($resultat); $i++) 

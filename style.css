@@ -224,6 +224,7 @@ header .nav-link.active {
 
 .content img {
     width: 100%;
+    margin-bottom: 2.6vw;
 }
 
 .content a {
