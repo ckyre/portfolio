@@ -1,20 +1,20 @@
 <?php
-    // $serveur = "localhost";
-    // $login = "u156942223_user";
-    // $pass = "mrTsA8GKTQnGXKYS2x7tm4K6cq6reZXd7kV";
-    // $dbName = "u156942223_portfolio";
-
     $serveur = "localhost";
-    $login = "root";
-    $pass = "";
-    $dbName = "portfolio";
+    $login = "u156942223_user";
+    $pass = "mrTsA8GKTQnGXKYS2x7tm4K6cq6reZXd7kV";
+    $dbName = "u156942223_portfolio";
+
+    // $serveur = "localhost";
+    // $login = "root";
+    // $pass = "";
+    // $dbName = "portfolio";
     
     try {
         // Get projects from database
         $connexion = new PDO("mysql:host=$serveur;dbname=$dbName", $login, $pass);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                                             
-        $requete = $connexion->prepare("SELECT * FROM projets ORDER BY id");
+        $requete = $connexion->prepare("SELECT * FROM projects ORDER BY id");
         $requete->execute();
 
         $resultat = $requete->fetchall();
@@ -53,12 +53,13 @@
 
         <!-- Left section/panel -->
         <section class="left">
-            <img src="assets/images/left-bg.svg" alt="" class="bg-image unselectable">
+            <img src="assets/images/left-bg.svg" alt="Texte de fond du panneau gauche" class="bg-image unselectable">
             <header>
                 <h2>Gabriel</h2>
                 <ul>
                     <li class="unselectable nav-link active" data-id="-1">A propos</li>
                     <li class="unselectable nav-link" data-id="-2">Contact</li>
+                    <li class="unselectable cv-button"><a href="assets/documents/CV Gabriel Rouleau.pdf" download><span>CV</span><img src="assets/images/download.svg" alt=""></a></li>
                 </ul>
             </header>
             <div class="content">
@@ -67,11 +68,11 @@
         </section>
 
         <!-- Face at center -->
-        <img src="assets/images/loulou.png" alt="" class="face-img">
+        <img src="assets/images/loulou.png" alt="Photo de profil" class="face-img">
 
         <!-- Right section/panel -->
         <section class="right">
-            <img src="assets/images/right-bg.svg" alt="" class="bg-image unselectable">
+            <img src="assets/images/right-bg.svg" alt="Texte de fond du panneau droit" class="bg-image unselectable">
             <ul class="projects">
                 <?php
                     for ($i=0; $i < count($resultat); $i++) 
