@@ -49,7 +49,12 @@
     </head>
     <body>
         <!-- Get projects descriptions from database and store it in js array -->
-        <script>var descriptions = <?php echo json_encode($descriptions); ?>;</script>
+        <script>
+            var descriptions = <?php echo json_encode($descriptions); ?>;
+
+            // Get first project to open (in url)
+            var startProject = <?php if(isset($_GET["project"])) { echo $_GET["project"]; } else { echo -1; } ?>;
+        </script>
 
         <!-- Left section/panel -->
         <section class="left">
