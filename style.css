@@ -115,6 +115,10 @@ audio {
     transition: opacity 0.5s;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+
 a.black {
     color: black;
 }
@@ -269,6 +273,10 @@ header .cv-button a:hover img {
     transition: opacity 0.5s;
 }
 
+.content h2 {
+    margin-bottom: 0.8vw;
+}
+
 .content img {
     width: 100%;
     margin-bottom: 2.6vw;
@@ -281,6 +289,29 @@ header .cv-button a:hover img {
 
 .content p a {
     margin-bottom: 0 !important;
+}
+
+.content p.quote {
+    font-size: calc(1.3vw + 5px);
+    font-style: italic;
+    text-align: center;
+    color: #5e5e5e;
+}
+
+.content .details {
+    margin-top: 1.2vw;
+    margin-bottom: 4.3vw;
+}
+
+.content ul {/* Lists in projects descirption */
+    list-style: inside;
+    font-size: calc(0.8vw + 5px); /* 20px at width 1920px*/
+    text-align: justify;
+    margin-bottom: 2.6vw;
+}
+
+.content ul li {
+    margin-bottom: 1.3vw;
 }
 
 /* Projects list */
