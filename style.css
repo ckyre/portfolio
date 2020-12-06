@@ -293,7 +293,6 @@ header .cv-button a:hover img {
 
 .content p.quote {
     font-size: calc(1.3vw + 5px);
-    font-style: italic;
     text-align: center;
     color: #5e5e5e;
 }

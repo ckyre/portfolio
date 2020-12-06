@@ -1,13 +1,8 @@
 <?php
-    $serveur = "localhost";
+    $serveur = "45.13.252.52";
     $login = "u156942223_user";
     $pass = "mrTsA8GKTQnGXKYS2x7tm4K6cq6reZXd7kV";
     $dbName = "u156942223_portfolio";
-
-    // $serveur = "localhost";
-    // $login = "root";
-    // $pass = "";
-    // $dbName = "portfolio";
     
     try {
         // Get projects from database
