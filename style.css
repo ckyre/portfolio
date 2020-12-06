@@ -208,6 +208,10 @@ iframe.ytb { /* Youtube iframe */
     display: none;
 }
 
+.right h1 {
+    font-size: calc(2vw + 5px);
+}
+
 /* Header (left panel) */
 header {
     display: flex;
