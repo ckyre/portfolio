@@ -3,11 +3,6 @@
     $login = "u156942223_user";
     $pass = "mrTsA8GKTQnGXKYS2x7tm4K6cq6reZXd7kV";
     $dbName = "u156942223_portfolio";
-
-    // $serveur = "localhost";
-    // $login = "root";
-    // $pass = "";
-    // $dbName = "portfolio";
     
     try {
         // Get projects from database
@@ -28,6 +23,7 @@
     catch(PDOException $e) {
         echo "Error : " .$e->getMessage();
     }
+
 ?>
 
 <!doctype html>
@@ -39,7 +35,14 @@
         <title>Gabriel Rouleau</title>
         <meta name="description" content="Bienvenue ! Je m’appelle Gabriel, j'ai 18 ans et après avoir obtenu un bac S, je suis actuellement en première année de DUT MMI à Bordeaux." />
         <link rel="icon" href="assets/images/favicon.ico" />
-        
+        <meta property="og:title" content="Portfolio de Gabriel Rouleau" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://gabrielrouleau.fr/" />
+        <meta property="og:image" content="http://gabrielrouleau.fr/assets/images/favicon.ico" />
+        <meta property="og:description" content="Bienvenue ! Je m’appelle Gabriel, j'ai 18 ans et après avoir obtenu un bac S, je suis actuellement en première année du DUT MMI à Bordeaux." />
+        <meta name="theme-color" content="#EB364B">
+        <meta name="twitter:card" content="summary_large_image">
+
         <!-- Include CSS -->
         <link rel="stylesheet" href="style.css">
 
@@ -64,7 +67,7 @@
                 <ul>
                     <li class="unselectable nav-link active" data-id="-1">A propos</li>
                     <li class="unselectable nav-link" data-id="-2">Contact</li>
-                    <li class="unselectable cv-button"><a href="assets/documents/CV Gabriel Rouleau.pdf" download><span>CV</span><img src="assets/images/download.svg" alt=""></a></li>
+                    <li class="unselectable cv-button"><a href="assets/documents/CV_Gabriel_Rouleau.pdf" download><span>CV</span><img src="assets/images/download.svg" alt=""></a></li>
                 </ul>
             </header>
             <div class="content">
@@ -73,7 +76,7 @@
         </section>
 
         <!-- Face at center -->
-        <img src="assets/images/loulou.png" alt="Photo de profil" class="face-img">
+        <img src="assets/images/profil.png" alt="Photo de profil" class="face-img">
 
         <!-- Right section/panel -->
         <section class="right">
