@@ -22,38 +22,41 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <section class="left">
-            <div class="landing">
-                <p>Hello 👋, I’m Gabriel ROULEAU</p>
-                <h1>I love graphics<br>programming</h1>
+        
+        <!-- LEFT -->
+        <div class="left">
+            <section class="landing">
+                <p class="subtitle">Hello 👋, I’m Gabriel ROULEAU</p>
+                <h1 class="title">I love graphics<br>programming</h1>
                 <p class="desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     At lectus fermentum sed quis penatibus sit quis sed. 
                     Fermentum nulla egestas vel pretium eget ipsum libero.
                 </p>
-                <button class="cta">
+                <a class="cta" href="#projects">
                     <img class="arrow" src="assets/svg/arrow.svg" alt="Continuer">
                     <img class="bg" src="assets/svg/cta-bg.svg" alt="Fond">
-                </button>
-            </div>
-        </section>
+                </a>
+            </section>
+        </div>
 
-        <section class="right"> 
-            <div class="landing">
-                <img src="assets/images/profil.png" alt="Photo de profil">
-            </div>
+        <!-- RIGHT -->
+        <div class="right">
+            <section class="landing">
+                <img class="profile-img" src="assets/images/profil.png" alt="Photo de profil">
+            </section>
 
-            <div class="projects">
-                <h3 class="section-title">Mes projets 🖐️</h3>
-                <ul>
-                    <li><a href="#">
-                        <div class="project">
-                            <h3>Mon moteur de jeux</h3>
-                            <p class="desc">Moteur, programmation graphique</p>
-                        </div>
-                    </a></li>
+            <section class="projects" id="projects">
+                <h3 class="title">Mes projets 🖐️</h3>
+
+                <ul class="projects-list">
+                    <li class="project"><a class="project-link" href="#"> <div class="project-content">
+                            <h3 class="project-title">Mon moteur de jeux</h3>
+                            <p class="project-tags">Moteur, programmation graphique</p>
+                    </div></a></li>
                 </ul>
-            </div>
-        </section>
+            </section>
+        </div>
+
     </body>
 </html>

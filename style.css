@@ -1,152 +1,195 @@
 @font-face {
-    font-family: "Poppins";
-    src: url(assets/fonts/Poppins-Regular.ttf);
-    font-weight: normal;
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Regular.ttf);
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(assets/fonts/Poppins-Bold.ttf);
-    font-weight: bold;
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Bold.ttf);
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(assets/fonts/Poppins-Light.ttf);
-    font-weight: 100;
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Light.ttf);
+  font-weight: 100;
 }
 
 @font-face {
-    font-family: "Poppins";
-    src: url(assets/fonts/Poppins-Italic.ttf);
-    font-weight: normal;
-    font-style: italic;
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins';
-}
-
-p {
-    font-size: 20px;
-}
-
-h1 {
-    font-size: 72px;
-    line-height: 80px;
-}
-
-h3 {
-    font-size: 36px;
-}
-
-p.desc {
-    color: #555551;
-}
-
-/***************************************/
-
-.left {
-    width: 50vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 0px 100px;
-}
-
-.left .landing {
-    margin-top: 140px;
-}
-
-.left .landing h1 {
-    margin-bottom: 18vh;
-}
-
-.left .landing .cta {
-    position: relative;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin-top: 2vh;
-}
-
-.left .landing .cta:hover .bg {
-    animation: 4s linear 0s infinite rotate;
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-.left .landing .cta .arrow {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.left .landing .cta .bg {
-    width: 100%;
-    height: 100%;
-    margin-top: 10px;
+h1 {
+  font-family: 'Poppins';
+  font-size: 72px;
+  line-height: 80px;
+  color: black;
 }
 
+h3 {
+  font-family: 'Poppins';
+  font-size: 46px;
+  color: black;
+}
+
+h3 {
+  font-family: 'Poppins';
+  font-size: 36px;
+  color: black;
+}
+
+p {
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: black;
+}
+
+p .desc {
+  color: #555551;
+}
+
+.cta {
+  position: relative;
+  display: block;
+  width: 15%;
+  margin-top: 2vh;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.cta .arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.cta .bg {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  -webkit-animation: 4s linear 0s infinite rotate;
+          animation: 4s linear 0s infinite rotate;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.cta:hover .bg {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+/***************LEFT*******************/
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  padding: 0px 100px;
+}
+
+.left .landing {
+  margin-top: 140px;
+}
+
+.left .landing h1 {
+  margin-bottom: 18vh;
+}
+
+/***************RIGHT******************/
 .right {
-    width: calc(50vw - (100vw - 100%));
-    position: absolute;
-    right: 0;
-    top: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(50vw - (100vw - 100%));
 }
 
 .right .landing {
-    height: 100vh;
+  height: 100vh;
+  background-color: white;
 }
 
 .right .landing img {
-    display: block;
-    width: 70%;
-    margin: 0 auto;
-    padding-top: 140px;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 140px;
 }
 
 .right .projects {
-    width: 100%;
-    height: 100vh;
-    background-color: red;
-    padding: 140px 100px 0px 100px;
-    color: white;
+  width: 100%;
+  height: 100vh;
+  background-color: #FF2E2E;
+  padding: 140px 100px 0px 90px;
 }
 
-.right .projects .section-title {
-    margin-bottom: 50px;
+.right .projects .title {
+  color: white;
+  margin-bottom: 50px;
 }
 
 .right .projects ul {
-    list-style: none;
+  list-style: none;
 }
 
-.right .projects ul li a {
-    color: white;
-    text-decoration: none;
+.right .projects .projects-list .project {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(assets/images/illustration1.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/illustration1.jpg);
+  width: 100%;
+  border-radius: 10px;
 }
 
-.right .projects ul li a .project {
-    background-image: url("assets/images/illustration1.jpg");
-    width: 100%;
-    padding: 40px;
-    border-radius: 10px;
+.right .projects .projects-list .project .project-link {
+  color: white;
+  text-decoration: none;
 }
+
+.right .projects .projects-list .project .project-link .project-content {
+  padding: 40px;
+}
+
+.right .projects .projects-list .project .project-link .project-content .project-title {
+  color: white;
+}
+
+.right .projects .projects-list .project .project-link .project-content .project-tags {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+/*# sourceMappingURL=style.css.map */
