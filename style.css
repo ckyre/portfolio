@@ -106,7 +106,7 @@ p.desc {
 }
 
 .right {
-    width: 50vw;
+    width: calc(50vw - (100vw - 100%));
     position: absolute;
     right: 0;
     top: 0;
@@ -118,9 +118,9 @@ p.desc {
 
 .right .landing img {
     display: block;
+    width: 70%;
     margin: 0 auto;
     padding-top: 140px;
-    border-radius: 10px;
 }
 
 .right .projects {
@@ -129,4 +129,24 @@ p.desc {
     background-color: red;
     padding: 140px 100px 0px 100px;
     color: white;
+}
+
+.right .projects .section-title {
+    margin-bottom: 50px;
+}
+
+.right .projects ul {
+    list-style: none;
+}
+
+.right .projects ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.right .projects ul li a .project {
+    background-image: url("assets/images/illustration1.jpg");
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
 }
