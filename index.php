@@ -1,9 +1,16 @@
 <?php
+    /*
     $serveur = "localhost";
     $login = "u156942223_user";
     $pass = "mrTsA8GKTQnGXKYS2x7tm4K6cq6reZXd7kV";
     $dbName = "u156942223_portfolio";
-    
+    */
+
+    $serveur = "localhost";
+    $login = "root";
+    $pass = "";
+    $dbName = "portfolio";
+
     try {
         // Get projects from database
         $connexion = new PDO("mysql:host=$serveur;dbname=$dbName", $login, $pass);
@@ -67,7 +74,7 @@
                 <ul>
                     <li class="unselectable nav-link active" data-id="-1">A propos</li>
                     <li class="unselectable nav-link" data-id="-2">Contact</li>
-                    <li class="unselectable cv-button"><a href="assets/documents/CV_Gabriel_Rouleau.pdf" download><span>CV</span><img src="assets/images/download.svg" alt=""></a></li>
+                    <li class="unselectable cv-button"><a href="assets/documents/CV Gabriel Rouleau.pdf" download><span>CV</span><img src="assets/images/download.svg" alt=""></a></li>
                 </ul>
             </header>
             <div class="content">
