@@ -1,5 +1,7 @@
 $black: black;
 $white: rgb(255, 255, 255);
+$darkGrey: #555551;
+$lightGrey: #c2c2bd;
 $transparent: rgba(255, 255, 255, 0.65);
 $main: #FF2E2E;
 
@@ -28,7 +30,7 @@ h1 {
     color: $black;
 }
 
-h3 {
+h2 {
     font-family: 'Poppins';
     font-size: 46px;
     color: $black;
@@ -46,7 +48,7 @@ p {
     color: $black;
 
     .desc {
-        color: #555551;
+        color: $darkGrey;
     }
 }
 
@@ -58,6 +60,12 @@ p {
     cursor: pointer;
     border: none;
     background-color: transparent;
+    transition: opacity 0.3s;
+
+    &.unactive {
+        opacity: 0;
+        pointer-events: none;
+    }
 
     .arrow {
         position: absolute;
@@ -65,20 +73,41 @@ p {
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        pointer-events: none;
     }
 
     .bg {
         width: 100%;
         height: 100%;
         margin-top: 10px;
+        pointer-events: none;
 
-        animation: 4s linear 0s infinite rotate;
+        animation: 3s linear 0s infinite rotate;
         animation-play-state: paused;
     }
 
     &:hover .bg {
         animation-play-state: running;
+    }
+}
 
+section.unactive {
+    display: none;
+}
+
+.flex {
+    display: flex;
+
+    &.center {
+        align-items: center;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+
+    &.space-around {
+        justify-content: space-around;
     }
 }
 
@@ -89,8 +118,10 @@ p {
     top: 0;
     left: 0;
     width: 50vw;
-    height: 100vh;
     padding: 0px 100px;
+    max-height: 100vh;
+    overflow: scroll;
+    scrollbar-width: none;
 
     ::selection {
         background-color: $main;
@@ -102,6 +133,71 @@ p {
 
         h1 {
             margin-bottom: 18vh;
+        }
+    }
+
+    .article {
+        margin-top: 140px;
+        font-family: "Poppins";
+
+        .header {
+            margin-bottom: 3.5vh;
+
+            button {
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+
+                img {
+                    width: 40px;
+                }
+            }
+        }
+
+        .article-content {
+            .article-properties {
+                background-color: rgb(231, 231, 231);
+                padding: 15px 25px;
+                border-radius: 10px;
+                margin-bottom: 3.5vh;
+
+                ul {
+                    list-style: none;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                p:not(.title), li {
+                    color: $darkGrey;
+                    font-size: 18px;
+                }
+
+                p:not(.title):not(:last-child), ul:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+
+                p.title {
+                    font-weight: bold;
+                }
+
+                .article-prop-col {
+                    min-width: 45%;
+                }
+            }
+
+            a {
+                color: $main;
+            }
+
+            p {
+                margin-bottom: 5vh;
+            }
+
+            h3 {
+                margin-bottom: 2vh;
+            }
         }
     }
 }
@@ -120,14 +216,14 @@ p {
     }
 
     .landing {
-        height: 100vh;
+        height: calc(100vh - 140px);
         background-color: $white;
 
         img {
             display: block;
             width: 70%;
-            margin: 0 auto;
-            padding-top: 140px;
+            margin: 140px auto 0 auto;
+            border-radius: 12px;
         }
     }
 
@@ -157,29 +253,37 @@ p {
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
+                overflow: hidden;
                 background-size: cover;
-                background-color: rgba(0, 0, 0, 0.514);
 
                 .project-link {
                     width: 100%;
                     height: 100%;
                     color: $white;
                     text-decoration: none;
+                    cursor: pointer;
 
                     .project-content {
                         width: 100%;
                         height: 100%;
                         padding: 40px;
+                        transition: background-color 0.4s;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        border-radius: 10px;
 
                         .project-title {
                             color: $white;
                         }
         
                         .project-tags {
-                            color: $transparent !important;
+                            color: $lightGrey !important;
                         }
                     }
                     
+                }
+
+                &:hover .project-content {
+                    background-color: rgba(0, 0, 0, 0.6);
                 }
 
                 &.main, &.one {

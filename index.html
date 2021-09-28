@@ -20,12 +20,13 @@
 
         <!-- Include scripts -->
         <script src="script.js" defer></script>
+        <script src="articles.js" defer></script>
     </head>
     <body>
         
         <!-- LEFT -->
         <div class="left">
-            <section class="landing">
+            <section class="landing" id="landing-section">
                 <p class="subtitle">Hello 👋, I’m Gabriel ROULEAU</p>
                 <h1 class="title">I love graphics<br>programming</h1>
                 <p class="desc">
@@ -33,10 +34,22 @@
                     At lectus fermentum sed quis penatibus sit quis sed. 
                     Fermentum nulla egestas vel pretium eget ipsum libero.
                 </p>
-                <a class="cta" href="#projects">
+                <a class="cta" href="#projects" id="cta">
                     <img class="arrow" src="assets/svg/arrow.svg" alt="Continuer">
                     <img class="bg" src="assets/svg/cta-bg.svg" alt="Fond">
                 </a>
+            </section>
+
+            <section class="article unactive" id="article-section">
+                <div class="flex center space-between header">
+                    <h2 class="title" id="article-title">Titre du projet</h2>
+                    <button class="close" onclick="CloseArticle()">
+                        <img src="assets/svg/cross.svg" alt="Croix">
+                    </button>
+                </div>
+                <div class="article-content" id="article-content">
+
+                </div>
             </section>
         </div>
 
@@ -51,21 +64,21 @@
 
                 <ul class="projects-list">
                     <li class="project main" style="background-image: url(assets/images/illustration1.jpg);">
-                        <a class="project-link" href="#"><div class="project-content">
+                        <a class="project-link" onclick="OpenArticle(0)"><div class="project-content">
                             <h3 class="project-title">Mon moteur de jeux</h3>
                             <p class="project-tags">Moteur, programmation graphique</p>
                         </div></a>
                     </li>
 
                     <li class="project two" style="background-image: url(assets/images/illustration2.jpg);">
-                        <a class="project-link" href="#"><div class="project-content">
+                        <a class="project-link" onclick="OpenArticle(1)"><div class="project-content">
                             <h3 class="project-title">Atelier jeux MMI</h3>
                             <p class="project-tags">Programmation gameplay</p>
                         </div></a>
                     </li>
 
                     <li class="project three" style="background-image: url(assets/images/illustration3.jpg);">
-                        <a class="project-link" href="#"><div class="project-content">
+                        <a class="project-link" onclick="OpenArticle(2)"><div class="project-content">
                             <h3 class="project-title">OpenGL C++</h3>
                             <p class="project-tags">Programmation graphique</p>
                         </div></a>

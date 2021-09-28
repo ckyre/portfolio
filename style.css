@@ -59,7 +59,7 @@ h1 {
   color: black;
 }
 
-h3 {
+h2 {
   font-family: 'Poppins';
   font-size: 46px;
   color: black;
@@ -89,6 +89,13 @@ p .desc {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.cta.unactive {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .cta .arrow {
@@ -98,14 +105,16 @@ p .desc {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
+  pointer-events: none;
 }
 
 .cta .bg {
   width: 100%;
   height: 100%;
   margin-top: 10px;
-  -webkit-animation: 4s linear 0s infinite rotate;
-          animation: 4s linear 0s infinite rotate;
+  pointer-events: none;
+  -webkit-animation: 3s linear 0s infinite rotate;
+          animation: 3s linear 0s infinite rotate;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -115,14 +124,43 @@ p .desc {
           animation-play-state: running;
 }
 
+section.unactive {
+  display: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex.space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 /***************LEFT*******************/
 .left {
   position: fixed;
   top: 0;
   left: 0;
   width: 50vw;
-  height: 100vh;
   padding: 0px 100px;
+  max-height: 100vh;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .left ::-moz-selection {
@@ -141,6 +179,69 @@ p .desc {
 
 .left .landing h1 {
   margin-bottom: 18vh;
+}
+
+.left .article {
+  margin-top: 140px;
+  font-family: "Poppins";
+}
+
+.left .article .header {
+  margin-bottom: 3.5vh;
+}
+
+.left .article .header button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.left .article .header button img {
+  width: 40px;
+}
+
+.left .article .article-content .article-properties {
+  background-color: #e7e7e7;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 3.5vh;
+}
+
+.left .article .article-content .article-properties ul {
+  list-style: none;
+}
+
+.left .article .article-content .article-properties p {
+  margin: 0;
+}
+
+.left .article .article-content .article-properties p:not(.title), .left .article .article-content .article-properties li {
+  color: #555551;
+  font-size: 18px;
+}
+
+.left .article .article-content .article-properties p:not(.title):not(:last-child), .left .article .article-content .article-properties ul:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.left .article .article-content .article-properties p.title {
+  font-weight: bold;
+}
+
+.left .article .article-content .article-properties .article-prop-col {
+  min-width: 45%;
+}
+
+.left .article .article-content a {
+  color: #FF2E2E;
+}
+
+.left .article .article-content p {
+  margin-bottom: 5vh;
+}
+
+.left .article .article-content h3 {
+  margin-bottom: 2vh;
 }
 
 /***************RIGHT******************/
@@ -162,15 +263,15 @@ p .desc {
 }
 
 .right .landing {
-  height: 100vh;
+  height: calc(100vh - 140px);
   background-color: white;
 }
 
 .right .landing img {
   display: block;
   width: 70%;
-  margin: 0 auto;
-  padding-top: 140px;
+  margin: 140px auto 0 auto;
+  border-radius: 12px;
 }
 
 .right .projects {
@@ -204,8 +305,8 @@ p .desc {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  overflow: hidden;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.514);
 }
 
 .right .projects .projects-list .project .project-link {
@@ -213,12 +314,17 @@ p .desc {
   height: 100%;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .right .projects .projects-list .project .project-link .project-content {
   width: 100%;
   height: 100%;
   padding: 40px;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .right .projects .projects-list .project .project-link .project-content .project-title {
@@ -226,7 +332,11 @@ p .desc {
 }
 
 .right .projects .projects-list .project .project-link .project-content .project-tags {
-  color: rgba(255, 255, 255, 0.65) !important;
+  color: #c2c2bd !important;
+}
+
+.right .projects .projects-list .project:hover .project-content {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .right .projects .projects-list .project.main, .right .projects .projects-list .project.one {
