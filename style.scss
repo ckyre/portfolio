@@ -59,7 +59,7 @@ p {
 .cta {
     position: relative;
     display: block;
-    width: 15%;
+    width: 14%;
     margin-top: 2vh;
     cursor: pointer;
     border: none;
@@ -95,10 +95,6 @@ p {
     }
 }
 
-section.unactive {
-    display: none;
-}
-
 .flex {
     display: flex;
 
@@ -116,13 +112,13 @@ section.unactive {
 }
 
 /***************LEFT*******************/
+// 19 avril - 1 juillet
 
 .left {
     position: fixed;
     top: 0;
     left: 0;
     width: 50vw;
-    padding: 0px 100px;
     max-height: 100vh;
     overflow: scroll;
     scrollbar-width: none;
@@ -131,10 +127,13 @@ section.unactive {
         background-color: $main;
         color: $white;
     }
-    // 19 avril - 1 juillet
 
     .landing {
+        width: 100%;
+        height: calc(100vh - 140px);
         margin-top: 140px;
+        padding: 0px 100px;
+        transition: opacity 0.2s;
 
         h1 {
             margin-bottom: 18vh;
@@ -142,19 +141,23 @@ section.unactive {
     }
 
     .article {
-        margin-top: 140px;
         font-family: "Poppins";
+        margin-top: 140px;
+        padding: 0px 80px;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.2s;
 
         .header {
             margin-bottom: 3.5vh;
 
             button {
                 position: relative;
-                width: 40px;
-                height: 40px;
+                width: 45px;
+                height: 45px;
                 border-radius: 1000px;
-                background-color: white;
-                border: solid 2px black;
+                background-color: black;
+                border: none;
                 cursor: pointer;
                 transition: background-color 0.3s;
 
@@ -163,12 +166,12 @@ section.unactive {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 60%;
+                    width: 55%;
                     pointer-events: none;
                 }
 
                 &:hover {
-                    background-color: #e7e7e7;
+                    background-color: rgb(46, 46, 46);
                 }
             }
         }
@@ -212,7 +215,13 @@ section.unactive {
             }
 
             h3 {
+                margin-top: 2vh;
                 margin-bottom: 2vh;
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 5vh;
             }
         }
     }
@@ -235,13 +244,18 @@ section.unactive {
     }
 
     .landing {
-        height: calc(100vh - 140px);
+        position: relative;
+        width: 100%;
+        height: 100vh;
         background-color: $white;
 
         img {
             display: block;
             width: 70%;
-            margin: 140px auto 0 auto;
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translate(-50%, 0%);
             border-radius: 12px;
         }
     }
@@ -249,7 +263,7 @@ section.unactive {
     .projects {
         width: 100%;
         min-height: 100vh;
-        padding: 140px 100px 0px 90px;
+        padding: 100px 80px;
         background-color: $main;
 
         .title {
@@ -266,7 +280,6 @@ section.unactive {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 275px);
             grid-gap: 15px;
-            padding-bottom: 140px;
 
             .project {
                 width: 100%;
@@ -333,5 +346,16 @@ section.unactive {
             }
         }
 
+    }
+
+    .credits {
+        background-color: $main;
+        text-align: center;
+        padding-bottom: 15px;
+        
+        p {
+            color: #860202;
+            font-size: 16px;
+        }
     }
 } 
