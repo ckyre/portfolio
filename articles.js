@@ -46,5 +46,9 @@ a1 = new Article("Refonte de site", `
     page principale qui permet de se rendre rapidement sur les deux autres pages. 
     Je me suis occupé du design et de l’intégration de la boutique et de la page contact ainsi 
     qu'une partie de l’intégration de la page principale.</p>
+
+    <p>Nous avons ensuite travaillé sur le design des pages avec Adobe XD. 
+    L'objectif étant de garder un ensemble cohérent. Il a donc fallu communiquer pour se mettre 
+    d’accord sur la couleur d’interaction ou les typographies par exemple.</p>
 `);
 articlesDB.push(a1);

@@ -52,6 +52,10 @@
           box-sizing: border-box;
 }
 
+body {
+  overflow: visible;
+}
+
 h1 {
   font-family: 'Poppins';
   font-size: 72px;
@@ -191,13 +195,29 @@ section.unactive {
 }
 
 .left .article .header button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+  background-color: white;
+  border: solid 2px black;
   cursor: pointer;
-  border: none;
-  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .left .article .header button img {
-  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  pointer-events: none;
+}
+
+.left .article .header button:hover {
+  background-color: #e7e7e7;
 }
 
 .left .article .article-content .article-properties {
@@ -211,10 +231,6 @@ section.unactive {
   list-style: none;
 }
 
-.left .article .article-content .article-properties p {
-  margin: 0;
-}
-
 .left .article .article-content .article-properties p:not(.title), .left .article .article-content .article-properties li {
   color: #555551;
   font-size: 18px;
@@ -225,6 +241,7 @@ section.unactive {
 }
 
 .left .article .article-content .article-properties p.title {
+  margin: 0;
   font-weight: bold;
 }
 
@@ -250,6 +267,9 @@ section.unactive {
   top: 0;
   right: 0;
   width: calc(50vw - (100vw - 100%));
+  max-height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .right ::-moz-selection {
