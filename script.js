@@ -1,11 +1,14 @@
 /****************** CTA **********************/
 
+const leftContainer = document.getElementById("left");
+const rightContainer = document.getElementById("right");
+
 const projectsSection = document.getElementById("projects");
 const projectsSectionTop = projectsSection.offsetTop - (window.innerHeight / 2);
 const cta = document.getElementById("cta");
 
-window.addEventListener ('scroll', function(e) {
-    if(window.scrollY > projectsSectionTop)
+rightContainer.addEventListener ('scroll', function(e) {
+    if(rightContainer.scrollTop > projectsSectionTop)
     {
         cta.classList.add("unactive");
     }
@@ -32,7 +35,6 @@ const landingSection = document.getElementById("landing-section");
 const articleSection = document.getElementById("article-section");
 const articleTitle = document.getElementById("article-title");
 const articleContent = document.getElementById("article-content");
-const leftContainer = document.getElementById("left");
 var openProject = -1;
 
 function OpenArticle (id)

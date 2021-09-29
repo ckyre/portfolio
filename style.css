@@ -53,36 +53,37 @@
 }
 
 body {
-  overflow: visible;
+  color: #FFFCF9;
+  background-color: #FFFCF9;
 }
 
 h1 {
   font-family: 'Poppins';
   font-size: 72px;
   line-height: 80px;
-  color: black;
+  color: #352D39;
 }
 
 h2 {
   font-family: 'Poppins';
   font-size: 46px;
-  color: black;
+  color: #352D39;
 }
 
 h3 {
   font-family: 'Poppins';
   font-size: 36px;
-  color: black;
+  color: #352D39;
 }
 
 p {
   font-family: 'Poppins';
   font-size: 20px;
-  color: black;
+  color: #352D39;
 }
 
 p .desc {
-  color: #555551;
+  color: #625966;
 }
 
 .cta {
@@ -160,16 +161,17 @@ p .desc {
   max-height: 100vh;
   overflow: scroll;
   scrollbar-width: none;
+  background-color: #FFFCF9;
 }
 
 .left ::-moz-selection {
   background-color: #FF2E2E;
-  color: white;
+  color: #FFFCF9;
 }
 
 .left ::selection {
   background-color: #FF2E2E;
-  color: white;
+  color: #FFFCF9;
 }
 
 .left .landing {
@@ -196,7 +198,7 @@ p .desc {
 }
 
 .left .article .header {
-  margin-bottom: 3.5vh;
+  margin-bottom: 6vh;
 }
 
 .left .article .header button {
@@ -204,7 +206,7 @@ p .desc {
   width: 45px;
   height: 45px;
   border-radius: 1000px;
-  background-color: black;
+  background-color: #352D39;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
@@ -221,15 +223,11 @@ p .desc {
   pointer-events: none;
 }
 
-.left .article .header button:hover {
-  background-color: #2e2e2e;
-}
-
 .left .article .article-content .article-properties {
-  background-color: #e7e7e7;
-  padding: 15px 25px;
+  padding: 20px;
+  margin-bottom: 8vh;
   border-radius: 10px;
-  margin-bottom: 3.5vh;
+  background-color: #edecee;
 }
 
 .left .article .article-content .article-properties ul {
@@ -237,8 +235,12 @@ p .desc {
 }
 
 .left .article .article-content .article-properties p:not(.title), .left .article .article-content .article-properties li {
-  color: #555551;
+  color: #625966;
   font-size: 18px;
+}
+
+.left .article .article-content .article-properties p {
+  margin: 0;
 }
 
 .left .article .article-content .article-properties p:not(.title):not(:last-child), .left .article .article-content .article-properties ul:not(:last-child) {
@@ -246,7 +248,6 @@ p .desc {
 }
 
 .left .article .article-content .article-properties p.title {
-  margin: 0;
   font-weight: bold;
 }
 
@@ -259,11 +260,11 @@ p .desc {
 }
 
 .left .article .article-content p {
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
 }
 
 .left .article .article-content h3 {
-  margin-top: 2vh;
+  margin-top: 7vh;
   margin-bottom: 2vh;
 }
 
@@ -284,20 +285,20 @@ p .desc {
 }
 
 .right ::-moz-selection {
-  background-color: white;
-  color: black;
+  background-color: #FFFCF9;
+  color: #352D39;
 }
 
 .right ::selection {
-  background-color: white;
-  color: black;
+  background-color: #FFFCF9;
+  color: #352D39;
 }
 
 .right .landing {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: #FFFCF9;
 }
 
 .right .landing img {
@@ -316,10 +317,11 @@ p .desc {
   min-height: 100vh;
   padding: 100px 80px;
   background-color: #FF2E2E;
+  border-radius: 10px 0 0 0;
 }
 
 .right .projects .title {
-  color: white;
+  color: #FFFCF9;
   margin-bottom: 50px;
 }
 
@@ -348,7 +350,7 @@ p .desc {
 .right .projects .projects-list .project .project-link {
   width: 100%;
   height: 100%;
-  color: white;
+  color: #FFFCF9;
   text-decoration: none;
   cursor: pointer;
 }
@@ -364,11 +366,11 @@ p .desc {
 }
 
 .right .projects .projects-list .project .project-link .project-content .project-title {
-  color: white;
+  color: #FFFCF9;
 }
 
 .right .projects .projects-list .project .project-link .project-content .project-tags {
-  color: #c2c2bd !important;
+  color: #edecee !important;
 }
 
 .right .projects .projects-list .project:hover .project-content {
@@ -418,16 +420,5 @@ p .desc {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
-}
-
-.right .credits {
-  background-color: #FF2E2E;
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.right .credits p {
-  color: #860202;
-  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,8 @@
-$black: black;
-$white: rgb(255, 255, 255);
-$darkGrey: #555551;
-$lightGrey: #c2c2bd;
-$transparent: rgba(255, 255, 255, 0.65);
+$black: #352D39;
+$white: #FFFCF9;
+$darkGrey: #625966;
+$lightGrey: #edecee;
+$transparent: #bab2be88;
 $main: #FF2E2E;
 
 @import 'fonts';
@@ -24,7 +24,8 @@ $main: #FF2E2E;
 }
 
 body {
-    overflow: visible;
+    color: $white;
+    background-color: $white;
 }
 
 h1 {
@@ -122,6 +123,7 @@ p {
     max-height: 100vh;
     overflow: scroll;
     scrollbar-width: none;
+    background-color: $white;
 
     ::selection {
         background-color: $main;
@@ -149,14 +151,14 @@ p {
         transition: opacity 0.2s;
 
         .header {
-            margin-bottom: 3.5vh;
+            margin-bottom: 6vh;
 
             button {
                 position: relative;
                 width: 45px;
                 height: 45px;
                 border-radius: 1000px;
-                background-color: black;
+                background-color: $black;
                 border: none;
                 cursor: pointer;
                 transition: background-color 0.3s;
@@ -169,19 +171,15 @@ p {
                     width: 55%;
                     pointer-events: none;
                 }
-
-                &:hover {
-                    background-color: rgb(46, 46, 46);
-                }
             }
         }
 
         .article-content {
             .article-properties {
-                background-color: rgb(231, 231, 231);
-                padding: 15px 25px;
+                padding: 20px;
+                margin-bottom: 8vh;
                 border-radius: 10px;
-                margin-bottom: 3.5vh;
+                background-color: $lightGrey;
 
                 ul {
                     list-style: none;
@@ -192,12 +190,15 @@ p {
                     font-size: 18px;
                 }
 
+                p {
+                    margin: 0;
+                }
+
                 p:not(.title):not(:last-child), ul:not(:last-child) {
                     margin-bottom: 25px;
                 }
 
                 p.title {
-                    margin: 0;
                     font-weight: bold;
                 }
 
@@ -211,11 +212,11 @@ p {
             }
 
             p {
-                margin-bottom: 5vh;
+                margin-bottom: 7vh;
             }
 
             h3 {
-                margin-top: 2vh;
+                margin-top: 7vh;
                 margin-bottom: 2vh;
             }
 
@@ -237,7 +238,7 @@ p {
     max-height: 100vh;
     overflow-y: auto;
     scrollbar-width: none;
-
+    
     ::selection {
         background-color: $white;
         color: $black;
@@ -265,6 +266,7 @@ p {
         min-height: 100vh;
         padding: 100px 80px;
         background-color: $main;
+        border-radius: 10px 0 0 0;
 
         .title {
             color: $white;
@@ -348,14 +350,4 @@ p {
 
     }
 
-    .credits {
-        background-color: $main;
-        text-align: center;
-        padding-bottom: 15px;
-        
-        p {
-            color: #860202;
-            font-size: 16px;
-        }
-    }
 } 

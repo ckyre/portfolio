@@ -12,25 +12,25 @@ a1 = new Article("Refonte de site", `
     <div class="article-properties">
         <div class="flex space-between">
             <div class="article-prop-col">
+                <p class="title">Taille de l'équipe</p>
+                <p>5</p>
+                <p class="title">Durée</p>
+                <p>2 semaines</p>
+                <p class="title">Date</p>
+                <p>Octobre 2020</p>
+            </div>
+            <div class="article-prop-col">
                 <p class="title">Rôles</p>
                 <ul>
                     <li>Webdesign</li>
                     <li>Front-end developpement</li>
                 </ul>
-                <p class="title">Taille de l'équipe</p>
-                <p>5</p>
                 <p class="title">Outils</p>
                 <ul>
                     <li>Adobe XD</li>
                     <li>VS Code</li>
                     <li>Netlify</li>
                 </ul>
-            </div>
-            <div class="article-prop-col">
-                <p class="title">Durée</p>
-                <p>2 semaines</p>
-                <p class="title">Date</p>
-                <p>Octobre 2020</p>
             </div>
         </div>
     </div>
