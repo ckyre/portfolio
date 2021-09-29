@@ -273,6 +273,11 @@ p .desc {
   margin-bottom: 5vh;
 }
 
+.left .article .article-content iframe {
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
 /***************RIGHT******************/
 .right {
   position: absolute;

@@ -1,4 +1,4 @@
-/****************** CTA **********************/
+/******************** CTA **************************/
 
 const leftContainer = document.getElementById("left");
 const rightContainer = document.getElementById("right");
@@ -28,43 +28,78 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+/******************** Articles **************************/
 
-/****************** ARTICLES **********************/
+class Article {
+    constructor(title, content){
+        this.Title = title;
+        this.Content = content;
+    }
+}
+var articlesDB = [];
 
+var aProjectIsOpen = false;
+var currentProject = 0;
+var canChange = true;
 const landingSection = document.getElementById("landing-section");
 const articleSection = document.getElementById("article-section");
 const articleTitle = document.getElementById("article-title");
 const articleContent = document.getElementById("article-content");
-var openProject = -1;
 
 function OpenArticle (id)
 {
-    if(id != openProject)
+    if(canChange)
     {
-        articleTitle.innerHTML = articlesDB[id].Title;
-        articleContent.innerHTML = articlesDB[id].Content;
+        if(!aProjectIsOpen)
+        {
+            leftContainer.scrollTop = 0;
 
-        // Fade animation
-        landingSection.style.opacity = "0";
-        setTimeout(function(){
-            landingSection.style.display = "none";
-            
-            articleSection.style.display = "block";
-            setTimeout(function() {
-                articleSection.style.opacity = "1";
-            }, 100);
-        }, 200);
+            articleTitle.innerHTML = articlesDB[id].Title;
+            articleContent.innerHTML = articlesDB[id].Content;
 
-        leftContainer.scrollTop = 0;
-        openProject = id;
+            currentProject = id;
+            aProjectIsOpen = true;
+
+            // Fade animation
+            landingSection.style.opacity = "0";
+            canChange = false;
+            setTimeout(function(){
+                landingSection.style.display = "none";
+                
+                articleSection.style.display = "block";
+                setTimeout(function() {
+                    articleSection.style.opacity = "1";
+                    canChange = true;
+                }, 100);
+            }, 200);
+        }
+        else if (id != currentProject) 
+        {
+            currentProject = id;
+
+            // Fade animation
+            canChange = false;
+            articleSection.style.opacity = "0";
+            setTimeout(function(){
+                leftContainer.scrollTop = 0;
+                articleTitle.innerHTML = articlesDB[id].Title;
+                articleContent.innerHTML = articlesDB[id].Content;
+
+                setTimeout(function() {
+                    articleSection.style.opacity = "1";
+                    canChange = true;
+                }, 100);
+            }, 200);
+        }
     }
 }
 
 function CloseArticle()
 {
-    if(openProject >= 0) 
+    if(aProjectIsOpen) 
     {
         // Fade animation
+        canChange = false;
         articleSection.style.opacity = "0";
         setTimeout(function(){
             articleSection.style.display = "none";
@@ -72,9 +107,11 @@ function CloseArticle()
             landingSection.style.display = "block";
             setTimeout(function() {
                 landingSection.style.opacity = "1";
+                canChange = true;
             }, 100);
         }, 200);
 
-        openProject = -1;
+        currentProject = 0;
+        aProjectIsOpen = false;
     }
 }
