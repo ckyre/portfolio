@@ -105,6 +105,7 @@ p .desc {
 
 .cta .arrow {
   position: absolute;
+  width: 35%;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -260,22 +261,30 @@ p .desc {
 }
 
 .left .article .article-content p {
-  margin-bottom: 7vh;
+  margin-bottom: 3vh;
 }
 
 .left .article .article-content h3 {
-  margin-top: 7vh;
-  margin-bottom: 2vh;
+  margin-top: 8vh;
+  margin-bottom: 1vh;
 }
 
 .left .article .article-content img {
   width: 100%;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
 .left .article .article-content iframe {
   width: 100%;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
+}
+
+.left .article .article-content #ytb {
+  height: calc((38.75vw - 160px) * 0.78);
+}
+
+.left .article .article-content a.no-margin, .left .article .article-content p.no-margin, .left .article .article-content h3.no-margin, .left .article .article-content img.no-margin, .left .article .article-content iframe.no-margin {
+  margin: 0 !important;
 }
 
 /***************RIGHT******************/
@@ -339,8 +348,8 @@ p .desc {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (275px)[2];
-      grid-template-rows: repeat(2, 275px);
+  -ms-grid-rows: (calc(50vw * 0.32))[4];
+      grid-template-rows: repeat(4, calc(50vw * 0.32));
   grid-gap: 15px;
 }
 
@@ -363,7 +372,7 @@ p .desc {
 .right .projects .projects-list .project .project-link .project-content {
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 30px;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   background-color: rgba(0, 0, 0, 0.4);
@@ -372,10 +381,32 @@ p .desc {
 
 .right .projects .projects-list .project .project-link .project-content .project-title {
   color: #FFFCF9;
+  pointer-events: none;
+}
+
+.right .projects .projects-list .project .project-link .project-content .project-title::-moz-selection {
+  background-color: transparent;
+  color: #FFFCF9;
+}
+
+.right .projects .projects-list .project .project-link .project-content .project-title::selection {
+  background-color: transparent;
+  color: #FFFCF9;
 }
 
 .right .projects .projects-list .project .project-link .project-content .project-tags {
   color: #edecee !important;
+  pointer-events: none;
+}
+
+.right .projects .projects-list .project .project-link .project-content .project-tags::-moz-selection {
+  background-color: transparent;
+  color: #edecee;
+}
+
+.right .projects .projects-list .project .project-link .project-content .project-tags::selection {
+  background-color: transparent;
+  color: #edecee;
 }
 
 .right .projects .projects-list .project:hover .project-content {

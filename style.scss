@@ -5,6 +5,14 @@ $lightGrey: #edecee;
 $transparent: #bab2be88;
 $main: #FF2E2E;
 
+// Cover letter :
+// Parler de soi, pourquoi l'entreprise / ce poste nous correspond
+// Ne pas parler de ses compétences, le CV est fait pour ca
+// Parler du bénévolat ! Par exemple l'organisation d'un meeting pour Cybernetic
+// Contacter le RH mais aussi le CEO
+// Adapter le cover letter aux demandes de l'annonce
+// Montrer que on aime le studio, ses produits
+
 @import 'fonts';
 
 @keyframes rotate {
@@ -74,6 +82,7 @@ p {
 
     .arrow {
         position: absolute;
+        width: 35%;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -212,23 +221,32 @@ p {
             }
 
             p {
-                margin-bottom: 7vh;
+                margin-bottom: 3vh;
             }
 
             h3 {
-                margin-top: 7vh;
-                margin-bottom: 2vh;
+                margin-top: 8vh;
+                margin-bottom: 1vh;
             }
 
             img {
                 width: 100%;
-                margin-bottom: 5vh;
+                margin-bottom: 3vh;
             }
 
             iframe {
                 width: 100%;
-                margin-bottom: 5vh;
+                margin-bottom: 3vh;
             }
+
+            #ytb {
+                height: calc((38.75vw - 160px) * 0.78);
+            }
+
+            a.no-margin, p.no-margin, h3.no-margin, img.no-margin, iframe.no-margin {
+                margin: 0 !important;
+            }
+            
         }
     }
 }
@@ -285,7 +303,7 @@ p {
         .projects-list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 275px);
+            grid-template-rows: repeat(4, calc(50vw * 0.32));
             grid-gap: 15px;
 
             .project {
@@ -305,17 +323,30 @@ p {
                     .project-content {
                         width: 100%;
                         height: 100%;
-                        padding: 40px;
+                        padding: 30px;
                         transition: background-color 0.4s;
                         background-color: rgba(0, 0, 0, 0.4);
                         border-radius: 10px;
 
                         .project-title {
                             color: $white;
+                            pointer-events: none;
+
+                            &::selection {
+                                background-color: transparent;
+                                color: $white;
+                            }
                         }
         
                         .project-tags {
                             color: $lightGrey !important;
+                            pointer-events: none;
+
+                            
+                            &::selection {
+                                background-color: transparent;
+                                color: $lightGrey;
+                            }
                         }
                     }
                     
