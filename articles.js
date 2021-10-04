@@ -61,8 +61,8 @@ articlesDB.push(new Article(
     Je travaille encore sur le moteur mais je souhaitais tout de même documenter 
     ma progression ici.
 
-    <p>Je me suis tout d’abord documenté pour comprendre le pipeline à mettre en place 
-    afin d’afficher mon premier triangle. Après avoir créé un tapon de sommets, définit 
+    <p>Je me suis tout d’abord renseigner afin de comprendre le pipeline à mettre en place 
+    pour afficher mon premier triangle. Après avoir créé un tapon de sommets, définit 
     un layout pour ce dernier et compilé un vertex et fragment shader basique j’ai pu 
     effectuer mon premier draw call et afficher un triangle :</p>
 
@@ -160,15 +160,15 @@ articlesDB.push(new Article(
     <p>A mon arrivée dans l’équipe j’ai mis en place <strong>l’intelligence 
     artificielle des ennemis</strong>.</p>
 
-    <p>Je me suis d’abord occupé du pathfinding géré par une classe commune à tous 
-    les NPC (passifs ou agressifs) du jeu. Cette dernière permet par exemple aux 
-    personnages de se rendre à un endroit ou de fuir un objet grâce au composant 
-    NavMeshAgent d'Unity.</p>
+    <p>J'ai d'abord construit une classe gérant le pathfinding grâce au
+    composant NavMeshAgent de Unity. Cette dernière est commune a tous les
+    NPC et permet par exemple aux personnages de se rendre à un endroit
+    ou de fuir un objet.</p>
 
-    <p>Je me suis ensuite occupé de la classe commune aux ennemis, en mettant en 
-    place un finite-state machine afin de pouvoir décliner le code pour chaque ennemi 
+    <p>Je me suis ensuite occupé de la classe responsable des combats, en mettant en 
+    place un finite-state machine afin de décliner le code pour chaque ennemi 
     plus facilement. Le joueur pouvant adopter plusieurs façons de jouer, les ennemis 
-    allaient donc avoir de nombreuses réactions différentes selon les types d’ennemis. 
+    allaient donc avoir de nombreuses réactions différentes selon leurs types. 
     Vous trouverez ci-dessous une démonstration de certains comportements des ennemis 
     en infiltration :</p>
 

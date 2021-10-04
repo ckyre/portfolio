@@ -156,6 +156,11 @@ p {
     }
 }
 
+.left, .right, html {
+    scrollbar-width: none;
+
+}
+
 .article {
     .article-content {
         font-family: 'Poppins';
@@ -288,6 +293,7 @@ p {
             width: 100vw;
             height: 100vh;
             overflow-y: scroll;
+            scrollbar-width: none;
             background-color: $white;
             padding: 60px;
             z-index: 10000;
@@ -387,7 +393,6 @@ p {
         width: 50vw;
         max-height: 100vh;
         overflow: scroll;
-        scrollbar-width: none;
         background-color: $white;
 
         .landing {
