@@ -8,3 +8,5 @@ Mon portfolio (https://gabrielrouleau.fr)
 2. Habiller la section landing
 3. Customiser une animation de scroooooll
 4. Rédaction du contenu
+5. Responsive
+6. Découvrir l'API notion
