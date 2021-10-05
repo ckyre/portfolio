@@ -261,14 +261,9 @@ p {
     
 }
 
-/***************PHONE******************/
-
-@media (min-width: 320px) and (max-width: 480px) {
-}
-
-/***************MEDIUM******************/
+/***************PORTRAIT******************/
  
-@media (min-width: 480px) and (max-width: 801px) {
+@media (max-aspect-ratio: 2.5 / 2) {
     body {
         margin: 60px 50px;
     }
@@ -381,9 +376,9 @@ p {
     }
 }
 
-/***************DESKTOP******************/
+/***************LANDSCAPE******************/
 
-@media (min-width: 801px) {
+@media (min-aspect-ratio: 2.5 / 2) {
 
     // Left
     .left {
