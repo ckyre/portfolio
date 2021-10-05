@@ -267,7 +267,7 @@ p {
     body {
         margin: 60px 50px;
 
-        @media (max-aspect-ratio: 3 / 4) {
+        @media (max-width: 500px) {
             margin: 50px 10px;
         }
     }
@@ -304,7 +304,7 @@ p {
             background-color: $white;
             padding: 60px;
 
-            @media (max-aspect-ratio: 3 / 4) {
+            @media (max-width: 500px) {
                 padding: 40px 10px;
 
                 .article-properties-container {

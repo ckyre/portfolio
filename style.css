@@ -305,7 +305,7 @@ p .desc {
   }
 }
 
-@media (orientation: portrait) and (max-aspect-ratio: 3 / 4) {
+@media (orientation: portrait) and (max-width: 500px) {
   body {
     margin: 50px 10px;
   }
@@ -342,7 +342,7 @@ p .desc {
   }
 }
 
-@media (orientation: portrait) and (max-aspect-ratio: 3 / 4) {
+@media (orientation: portrait) and (max-width: 500px) {
   .left .article {
     padding: 40px 10px;
   }
