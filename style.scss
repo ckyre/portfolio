@@ -272,6 +272,13 @@ p {
         }
     }
 
+    .close {
+        position: fixed;
+        top: 7vh;
+        right: 5vw;
+        z-index: 20000;
+    }
+
     .left {
         position: static;
         width: 100%;
@@ -287,6 +294,7 @@ p {
             position: fixed;
             top: 0;
             left: 0;
+            z-index: 10000;
             display: none;
             opacity: 0;
             width: 100vw;
@@ -295,7 +303,18 @@ p {
             scrollbar-width: none;
             background-color: $white;
             padding: 60px;
-            z-index: 10000;
+
+            @media (max-aspect-ratio: 3 / 4) {
+                padding: 40px 10px;
+
+                .article-properties-container {
+                    display: block !important;
+
+                    .title:first-child {
+                        margin-top: 25px;
+                    }
+                }
+            }
 
             .article-content {
                 iframe {

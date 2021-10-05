@@ -312,6 +312,12 @@ p .desc {
 }
 
 @media (max-aspect-ratio: 2.5 / 2) {
+  .close {
+    position: fixed;
+    top: 7vh;
+    right: 5vw;
+    z-index: 20000;
+  }
   .left {
     position: static;
     width: 100%;
@@ -324,6 +330,7 @@ p .desc {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10000;
     display: none;
     opacity: 0;
     width: 100vw;
@@ -332,8 +339,22 @@ p .desc {
     scrollbar-width: none;
     background-color: #FFFCF9;
     padding: 60px;
-    z-index: 10000;
   }
+}
+
+@media (max-aspect-ratio: 2.5 / 2) and (max-aspect-ratio: 3 / 4) {
+  .left .article {
+    padding: 40px 10px;
+  }
+  .left .article .article-properties-container {
+    display: block !important;
+  }
+  .left .article .article-properties-container .title:first-child {
+    margin-top: 25px;
+  }
+}
+
+@media (max-aspect-ratio: 2.5 / 2) {
   .left .article .article-content iframe {
     width: 100%;
     margin-bottom: 3vh;

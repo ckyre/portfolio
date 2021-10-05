@@ -2,7 +2,7 @@
 articlesDB.push(new Article(
     "Refonte de site", `
     <div class="article-properties">
-        <div class="flex space-between">
+        <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
                 <p class="title">Taille de l'équipe</p>
                 <p>5</p>
@@ -34,7 +34,7 @@ articlesDB.push(new Article(
 articlesDB.push(new Article(
     "Minecraft OpenGL", `
     <div class="article-properties">
-        <div class="flex space-between">
+        <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
                 <p class="title">Taille de l'équipe</p>
                 <p>Seul</p>
@@ -112,7 +112,7 @@ articlesDB.push(new Article(
 articlesDB.push(new Article(
     "Jeu avec une équipe grecque", `
     <div class="article-properties">
-        <div class="flex space-between">
+        <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
                 <p class="title">Taille de l'équipe</p>
                 <p>5</p>
@@ -196,7 +196,7 @@ articlesDB.push(new Article(
 articlesDB.push(new Article(
     "Atelier jeux vidéo MMI", `
     <div class="article-properties">
-        <div class="flex space-between">
+        <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
                 <p class="title">Taille de l'équipe</p>
                 <p>5</p>
