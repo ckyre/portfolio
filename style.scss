@@ -406,8 +406,18 @@ p {
         }
     }
 
-    .cta {
-        width: 80px;
+    .actions-container {
+        .cta {
+            display: none !important;
+        }
+
+        .cv-link {
+            color: $main;
+
+            p {
+                color: $main;
+            }
+        }
     }
 }
 

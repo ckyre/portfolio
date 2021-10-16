@@ -430,8 +430,14 @@ p .desc {
   .right .projects .projects-list .project:not(:last-child) {
     margin-bottom: 20px;
   }
-  .cta {
-    width: 80px;
+  .actions-container .cta {
+    display: none !important;
+  }
+  .actions-container .cv-link {
+    color: #FF2E2E;
+  }
+  .actions-container .cv-link p {
+    color: #FF2E2E;
   }
 }
 
