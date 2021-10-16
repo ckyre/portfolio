@@ -96,43 +96,55 @@ p {
     }
 }
 
-.cta {
-    position: relative;
-    display: block;
-    width: 14%;
+.landing .actions-container {
     margin-top: 2vh;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    transition: opacity 0.3s;
 
-    &.unactive {
-        opacity: 0;
-        pointer-events: none;
+    .cv-link {
+        text-decoration: underline;
+
+        img {
+            height: 1.5rem;
+            margin-left: 1rem;
+        }
     }
+        
+    .cta {
+        position: relative;
+        display: block;
+        width: 14%;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: opacity 0.3s;
 
-    .arrow {
-        position: absolute;
-        width: 35%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        pointer-events: none;
-    }
+        &.unactive {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-    .bg {
-        width: 100%;
-        height: 100%;
-        margin-top: 10px;
-        pointer-events: none;
+        .arrow {
+            position: absolute;
+            width: 35%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            pointer-events: none;
+        }
 
-        animation: 3s linear 0s infinite rotate;
-        animation-play-state: paused;
-    }
+        .bg {
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+            pointer-events: none;
 
-    &:hover .bg {
-        animation-play-state: running;
+            animation: 3s linear 0s infinite rotate;
+            animation-play-state: paused;
+        }
+
+        &:hover .bg {
+            animation-play-state: running;
+        }
     }
 }
 
