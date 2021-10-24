@@ -131,6 +131,7 @@ p .desc {
 }
 
 .landing .actions-container .cv-link {
+  color: #352D39;
   text-decoration: underline;
 }
 
@@ -148,6 +149,12 @@ p .desc {
   background-color: transparent;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+@media (min-width: 2000px) {
+  .landing .actions-container .cta {
+    width: 11%;
+  }
 }
 
 .landing .actions-container .cta.unactive {
@@ -455,6 +462,16 @@ p .desc {
     margin-top: 140px;
     padding: 0px 100px;
   }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .left .landing {
+    margin-top: 220px;
+    padding: 0px 200px;
+  }
+}
+
+@media (orientation: landscape) {
   .left ::-moz-selection {
     background-color: #FF2E2E;
     color: #FFFCF9;
@@ -472,6 +489,16 @@ p .desc {
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .left .article {
+    margin-top: 190px;
+    padding: 0px 150px;
+  }
+}
+
+@media (orientation: landscape) {
   .left .article .article-properties iframe {
     width: 100%;
     margin-bottom: 3vh;
@@ -515,6 +542,15 @@ p .desc {
             transform: translate(-50%, 0%);
     border-radius: 12px;
   }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .right .landing img {
+    top: 190px;
+  }
+}
+
+@media (orientation: landscape) {
   .right .projects {
     width: 100%;
     min-height: 100vh;
@@ -522,6 +558,15 @@ p .desc {
     background-color: #FF2E2E;
     border-radius: 10px 0 0 0;
   }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .right .projects {
+    padding: 150px 150px;
+  }
+}
+
+@media (orientation: landscape) {
   .right .projects .title {
     color: #FFFCF9;
     margin-bottom: 50px;

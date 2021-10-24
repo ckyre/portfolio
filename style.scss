@@ -7,14 +7,6 @@ $lightGrey: #edecee;
 $transparent: #bab2be88;
 $main: #FF2E2E;
 
-// Cover letter :
-// Parler de soi, pourquoi l'entreprise / ce poste nous correspond
-// Ne pas parler de ses compétences, le CV est fait pour ca
-// Parler du bénévolat ! Par exemple l'organisation d'un meeting pour Cybernetic
-// Contacter le RH mais aussi le CEO
-// Adapter le cover letter aux demandes de l'annonce
-// Montrer que on aime le studio, ses produits
-
 /***************COMPONENTS******************/
 
 @import 'fonts';
@@ -100,6 +92,7 @@ p {
     margin-top: 2vh;
 
     .cv-link {
+        color: $black;
         text-decoration: underline;
 
         img {
@@ -116,6 +109,10 @@ p {
         border: none;
         background-color: transparent;
         transition: opacity 0.3s;
+
+        @media (min-width: 2000px){
+            width: 11%;
+        }
 
         &.unactive {
             opacity: 0;
@@ -431,6 +428,11 @@ p {
             height: calc(100vh - 140px);
             margin-top: 140px;
             padding: 0px 100px;
+
+            @media (min-width: 2000px) {
+                margin-top: 220px;
+                padding: 0px 200px;
+            }
         }
 
         ::selection {
@@ -445,6 +447,11 @@ p {
             display: none;
             opacity: 0;
             transition: opacity 0.2s;
+
+            @media (min-width: 2000px) {
+                margin-top: 190px;
+                padding: 0px 150px;
+            }
 
             .article-properties {
                 iframe {
@@ -474,7 +481,7 @@ p {
         max-height: 100vh;
         overflow-y: auto;
         scrollbar-width: none;
-        
+
         ::selection {
             background-color: $white;
             color: $black;
@@ -494,6 +501,10 @@ p {
                 left: 50%;
                 transform: translate(-50%, 0%);
                 border-radius: 12px;
+
+                @media (min-width: 2000px) {
+                    top: 190px;
+                }
             }
         }
 
@@ -503,6 +514,10 @@ p {
             padding: 100px 80px;
             background-color: $main;
             border-radius: 10px 0 0 0;
+
+            @media (min-width: 2000px) {
+                padding: 150px 150px;
+            }
 
             .title {
                 color: $white;
