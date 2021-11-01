@@ -453,21 +453,28 @@ p .desc {
     top: 0;
     left: 0;
     width: 50vw;
-    max-height: 100vh;
+    height: 100vh;
     overflow: scroll;
     background-color: #FFFCF9;
   }
   .left .landing {
-    height: calc(100vh - 140px);
-    margin-top: 140px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
     padding: 0px 100px;
+  }
+  .left .landing h1 {
+    font-size: 52px;
   }
 }
 
 @media (orientation: landscape) and (min-width: 2000px) {
   .left .landing {
-    margin-top: 220px;
     padding: 0px 200px;
+  }
+  .left .landing h1 {
+    font-size: 72px;
   }
 }
 
@@ -499,12 +506,12 @@ p .desc {
 }
 
 @media (orientation: landscape) {
-  .left .article .article-properties iframe {
+  .left .article .article-content iframe {
     width: 100%;
     margin-bottom: 3vh;
   }
-  .left .article .article-properties #ytb {
-    height: calc((38.75vw - 160px) * 0.78);
+  .left .article .article-content #ytb {
+    height: calc((38.75vw - 160px) * 0.68);
   }
   .left .article .header {
     margin-bottom: 6vh;
@@ -529,28 +536,19 @@ p .desc {
   .right .landing {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 92vh;
     background-color: #FFFCF9;
   }
   .right .landing img {
     display: block;
-    height: 60%;
+    width: 60%;
     position: absolute;
-    top: 140px;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border-radius: 12px;
   }
-}
-
-@media (orientation: landscape) and (min-width: 2000px) {
-  .right .landing img {
-    top: 190px;
-  }
-}
-
-@media (orientation: landscape) {
   .right .projects {
     width: 100%;
     min-height: 100vh;
