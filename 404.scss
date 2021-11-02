@@ -1,0 +1,28 @@
+@import "variables";
+
+header {
+    width: 100%;
+    padding: 80px 25vw;
+    background-color: $main;
+
+    @media (max-width: 350px) {
+        padding: 80px 5vw;
+    }
+
+    h2 {
+        color: $white;
+    }
+}
+
+.container {
+    padding: 60px 25vw;
+
+    @media (max-width: 350px) {
+        padding: 60px 5vw;
+    }
+
+
+    a {
+        color: $main;
+    }
+}
