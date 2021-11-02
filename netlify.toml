@@ -2,3 +2,8 @@
   from = "/*"
   to = "/erros/404.html"
   status = 404
+
+[[redirects]]
+  from = "/assets/images/*"
+  to = "/erros/404.html"
+  status = 200
