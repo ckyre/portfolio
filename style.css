@@ -65,7 +65,7 @@
 }
 
 .landing .actions-container .cv-link {
-  color: #352D39;
+  color: #201c22;
   text-decoration: underline;
 }
 
@@ -128,7 +128,7 @@
   width: 45px;
   height: 45px;
   border-radius: 1000px;
-  background-color: #352D39;
+  background-color: #201c22;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
@@ -461,11 +461,11 @@
   }
   .right ::-moz-selection {
     background-color: #FFFCF9;
-    color: #352D39;
+    color: #201c22;
   }
   .right ::selection {
     background-color: #FFFCF9;
-    color: #352D39;
+    color: #201c22;
   }
   .right .landing {
     position: relative;
