@@ -1,33 +1,65 @@
 /****************** 1 **********************/
 articlesDB.push(new Article(
-    "Refonte de site", `
+    "Brio", `
     <div class="article-properties">
         <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
-                <p class="title">Taille de l'équipe</p>
-                <p>5</p>
-                <p class="title">Durée</p>
-                <p>2 semaines</p>
-                <p class="title">Date</p>
-                <p>Octobre 2020</p>
-            </div>
-            <div class="article-prop-col">
-                <p class="title">Rôles</p>
-                <ul>
-                    <li>Webdesign</li>
-                    <li>Front-end developpement</li>
-                </ul>
                 <p class="title">Outils</p>
                 <ul>
-                    <li>Adobe XD</li>
-                    <li>VS Code</li>
-                    <li>Netlify</li>
+                    <li>C++</li>
+                    <li>VS Community</li>
+                    <li>Git</li>
+                    <li>Premake</li>
+                </ul>
+                <p class="title">Date</p>
+                <p>Juin 2021</p>
+            </div>
+            <div class="article-prop-col">
+                <p class="title">Taille de l'équipe</p>
+                <p>Seul</p>
+                <p class="title">Rôles</p>
+                <ul>
+                    <li>Programmation 3D</li>
+                    <li>Programmation moteur</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <p>Description du projet ici...</p>
+    <iframe id="ytb" width="560" height="315" src="https://www.youtube.com/embed/wmpEey7ClYQ" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>Les moteurs de jeux sont des systèmes conséquents, j’implémente régulièrement de nouvelles 
+    fonctionnalités au moteur. En attendant qu'il devienne le prochain moteur de jeu mainstream, voici les 
+    quelques fonctionnalités déjà implémentées :</p>
+
+    <ul>
+        <li>Un système d’événements et leurs propagations entre les layers de l'application</li>
+        <li>La gestion des inputs et de certains éventements grâce a GLFW</li>
+        <li>Un système de rendu 3D supportant les éléments suivant :
+            <ul class="no-margin">
+                <li>Les principaux buffers (vertex, index et frame buffers)</li>
+                <li>Lecture et compilation des shaders</li>
+                <li>Textures de type 2D et cubes</li>
+                <li>Cameras avec projection orthographique ou perspective</li>
+                <li>Les matériaux avec gestion des uniforms, des uniforms buffer (pour OpenGL) et 
+                de quelques flags tel que l'activation du back-face culling</li>
+                <li>Les meshs avec lecture de fichiers grâce à ASSIMP</li>
+                <li>Des shaders dit "Lit" supportant les lumières ambiantes, diffuses 
+                (réflectance lambertienne) et spéculaires (modèle Blinn-Phong). Mais aussi les 
+                textures spéculaires pour masquer certains reflets.</li>
+                <li>Différents types de sources de lumière : point, directional et spot lights</li>
+                <li>Les skybox</li>
+            </ul>
+        </li>
+        <li>Une abstraction complète du système de rendu pour l'API OpenGL</li>
+        <li>Un début d'interface pour l'éditeur grâce a ImGui</li>
+        <li>Un début de ECS grâce a EnTT</li>
+    </ul>
+
+    <p>Si vous souhaitez voir mon implémentation de ces fonctionnalités 
+    rendez-vous sur le repository du projet : <a href="https://github.com/Ckyre/Brio">https://github.com/Ckyre/Brio</a></p>
 `));
 
 /****************** 2 **********************/

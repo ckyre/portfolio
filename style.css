@@ -161,6 +161,8 @@
 
 .article .article-content .article-properties ul {
   list-style: none;
+  margin-left: 0;
+  line-height: 1.8rem;
 }
 
 .article .article-content .article-properties p:not(.title), .article .article-content .article-properties li {
@@ -200,6 +202,27 @@
 .article .article-content img {
   width: 100%;
   margin-bottom: 3vh;
+}
+
+.article .article-content ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 15px;
+  line-height: 2.3rem;
+}
+
+.article .article-content ul:not(.no-margin) {
+  margin-bottom: 3vh;
+}
+
+.article .article-content ul li {
+  font-size: 20px;
+  color: #201c22;
+}
+
+.article .article-content ul li ul {
+  list-style: circle;
+  margin-left: 28px;
 }
 
 .article .article-content a.no-margin, .article .article-content p.no-margin, .article .article-content h3.no-margin, .article .article-content img.no-margin, .article .article-content iframe.no-margin {
