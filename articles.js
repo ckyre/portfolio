@@ -4,6 +4,15 @@ articlesDB.push(new Article(
     <div class="article-properties">
         <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
+                <p class="title">Taille de l'équipe</p>
+                <p>Seul</p>
+                <p class="title">Rôles</p>
+                <ul>
+                    <li>Programmation 3D</li>
+                    <li>Programmation moteur</li>
+                </ul>
+            </div>
+            <div class="article-prop-col">
                 <p class="title">Outils</p>
                 <ul>
                     <li>VS Community</li>
@@ -13,15 +22,6 @@ articlesDB.push(new Article(
                 <p class="title">Date</p>
                 <p>Juin 2021</p>
             </div>
-            <div class="article-prop-col">
-                <p class="title">Taille de l'équipe</p>
-                <p>Seul</p>
-                <p class="title">Rôles</p>
-                <ul>
-                    <li>Programmation 3D</li>
-                    <li>Programmation moteur</li>
-                </ul>
-            </div>
         </div>
     </div>
 
@@ -30,8 +30,7 @@ articlesDB.push(new Article(
     gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <p>Les moteurs de jeux sont des systèmes conséquents, j’implémente régulièrement de nouvelles 
-    fonctionnalités a mon moteur. J'ai utilisé pour cela le language C++ avec VS Community.
-    En attendant qu'il devienne le prochain moteur de jeu mainstream, voici les 
+    fonctionnalités a mon moteur, en C++. En attendant qu'il devienne le prochain moteur de jeu mainstream, voici les 
     quelques fonctionnalités déjà implémentées :</p>
 
     <ul>
