@@ -6,7 +6,6 @@ articlesDB.push(new Article(
             <div class="article-prop-col">
                 <p class="title">Outils</p>
                 <ul>
-                    <li>C++</li>
                     <li>VS Community</li>
                     <li>Git</li>
                     <li>Premake</li>
@@ -31,7 +30,8 @@ articlesDB.push(new Article(
     gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <p>Les moteurs de jeux sont des systèmes conséquents, j’implémente régulièrement de nouvelles 
-    fonctionnalités au moteur. En attendant qu'il devienne le prochain moteur de jeu mainstream, voici les 
+    fonctionnalités a mon moteur. J'ai utilisé pour cela le language C++ avec VS Community.
+    En attendant qu'il devienne le prochain moteur de jeu mainstream, voici les 
     quelques fonctionnalités déjà implémentées :</p>
 
     <ul>
