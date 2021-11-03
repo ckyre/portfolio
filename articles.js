@@ -225,7 +225,7 @@ articlesDB.push(new Article(
 
 /****************** 4 **********************/
 articlesDB.push(new Article(
-    "Atelier jeux vidéo MMI", `
+    "Akani, Defeat the world", `
     <div class="article-properties">
         <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
@@ -250,26 +250,19 @@ articlesDB.push(new Article(
                 </ul>
             </div>
         </div>
+        <a class="download-btn" href="https://fikacorp.itch.io/akagani">Télécharger sur itch.io</a>
     </div>
 
     <iframe id="ytb" width="560" height="315" src="https://www.youtube.com/embed/ZXLYm_i6tGw" title="YouTube video player" 
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen></iframe>
 
-    <p>Dans le cadre d’un atelier du DUT MMI à Bordeaux nous avons réalisé un jeu vidéo en une semaine sur 
-    Unity. Le rendu final de ce projet est la vidéo ci-dessus.</p>
+    <p>Nous avions une idée claire de ce à quoi le game feel devait ressembler. Et c'est en gardant cette vision 
+    au centre des décisions de conception que nous avons réussi à tenir ce que nous avions prévu.</p>
 
-    <h3>Le jeu</h3>
-
-    <p>Ce jeu est un beat them all 2D où le joueur doit éliminer des vagues d'ennemis avec un boomerang 
-    afin de récolter de l’argent. Cet argent peut être dépensé pour améliorer l'équipement, acheter de la 
-    vie ou passer au niveau suivant.</p>
+    <p>Travailler en équipe fut très agréable car j'ai pu me concentrer sur ce qui avait vraiment de l'impact 
+    sur l'expérience du joueur. En tant que lead programmer, j'ai pu prenre le temps peaufiner les contrôles et 
+    les feedbacks du joueur. Un luxe que je m'accorderais volontiers pour les prochaines gam jam.</p>
 
     <img src="assets/images/projects/akagani-gameplay.gif">
-    
-    <iframe src="https://itch.io/embed/817421?bg_color=FFFCF9&amp;fg_color=352D39&amp;
-    link_color=FF2E2E&amp;border_color=feebeb" width="552" height="167" frameborder="0">
-    <a href="https://fikacorp.itch.io/akagani">Akagani by Fikacorp, MerlinWasTaken, Niweb, 
-    Kayo SILVA, kodypistol, Gabriel ROULEAU</a></iframe>
-
 `));

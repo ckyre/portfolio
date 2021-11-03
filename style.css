@@ -159,6 +159,16 @@
   background-color: #edecee;
 }
 
+.article .article-content .article-properties .download-btn {
+  display: block;
+  text-align: center;
+  background-color: #FF2E2E;
+  border-radius: 12px;
+  color: #FFFCF9;
+  text-decoration: none;
+  padding: 12px 15px;
+}
+
 .article .article-content .article-properties ul {
   list-style: none;
   margin-left: 0;

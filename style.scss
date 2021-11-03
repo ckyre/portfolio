@@ -126,6 +126,16 @@
             border-radius: $border-radius;
             background-color: $lightGrey;
 
+            .download-btn {
+                display: block;
+                text-align:  center;
+                background-color: $main;
+                border-radius: $border-radius;
+                color: $white;
+                text-decoration: none;
+                padding: 12px 15px;
+            }
+
             ul {
                 list-style: none;
                 margin-left: 0;
