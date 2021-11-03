@@ -36,9 +36,17 @@
 
 /***************COMMON******************/
 .credits {
+  font-size: 1rem;
   background-color: #FF2E2E;
   text-align: center;
   color: #8d1616;
+  padding-bottom: 20px;
+}
+
+@media (orientation: portrait) {
+  .credits {
+    display: none;
+  }
 }
 
 .landing {

@@ -12,10 +12,17 @@
 
 /***************COMMON******************/
 
+
 .credits {
+    font-size: 1rem;
     background-color: $main;
     text-align: center;
     color: #8d1616;
+    padding-bottom: 20px;
+
+    @media (orientation: portrait) {
+        display: none;
+    }
 }
 
 .landing {
