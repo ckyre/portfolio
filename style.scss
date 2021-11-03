@@ -1,3 +1,5 @@
+@import "variables";
+
 @keyframes rotate {
     from {
       transform: rotate(0deg);
@@ -9,6 +11,12 @@
 }
 
 /***************COMMON******************/
+
+.credits {
+    background-color: $main;
+    text-align: center;
+    color: #8d1616;
+}
 
 .landing {
     width: 100%;
@@ -452,7 +460,7 @@
             border-radius: $border-radius 0 0 0;
 
             @media (min-width: 2000px) {
-                padding: 150px 150px;
+                padding: 100px 150px;
             }
 
             .title {

@@ -12,21 +12,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Poppins";
-  src: url(assets/fonts/Poppins-Light.ttf);
-  font-weight: 100;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(assets/fonts/Poppins-Italic.ttf);
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -50,6 +35,12 @@
 }
 
 /***************COMMON******************/
+.credits {
+  background-color: #FF2E2E;
+  text-align: center;
+  color: #8d1616;
+}
+
 .landing {
   width: 100%;
   -webkit-transition: opacity 0.2s;
@@ -494,7 +485,7 @@
 
 @media (orientation: landscape) and (min-width: 2000px) {
   .right .projects {
-    padding: 150px 150px;
+    padding: 100px 150px;
   }
 }
 
