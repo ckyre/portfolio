@@ -1,6 +1,6 @@
 /****************** 1 **********************/
 articlesDB.push(new Article(
-    "Brio", `
+    "Brio, mon moteur de jeu", `
     <div class="article-properties">
         <div class="flex space-between article-properties-container">
             <div class="article-prop-col">

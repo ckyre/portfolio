@@ -9,15 +9,12 @@ const cta = document.getElementById("cta");
 
 rightContainer.addEventListener ('scroll', function(e) {
     if(rightContainer.scrollTop > projectsSectionTop)
-    {
         cta.classList.add("unactive");
-    }
     else
-    {
         cta.classList.remove("unactive");
-    }
 });
 
+// Smooth scroll anchor
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -29,7 +26,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /******************** Articles **************************/
-
 class Article {
     constructor(title, content){
         this.Title = title;
@@ -39,7 +35,7 @@ class Article {
 var articlesDB = [];
 
 var aProjectIsOpen = false;
-var currentProject = 0;
+var currentProject = -1;
 var canChange = true;
 const landingSection = document.getElementById("landing-section");
 const articleSection = document.getElementById("article-section");
@@ -113,5 +109,27 @@ function CloseArticle()
 
         currentProject = 0;
         aProjectIsOpen = false;
+    }
+}
+
+function getUrlVars()
+{
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function OnContentLoaded()
+{
+    // Open url project
+    var urlParameters = getUrlVars();
+    var projectID = urlParameters["project"];
+
+    if(projectID != null && projectID < articlesDB.length)
+    {
+        OpenArticle(urlParameters["project"]);
+        projectsSection.scrollIntoView();
     }
 }
