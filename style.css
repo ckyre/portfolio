@@ -153,46 +153,76 @@
 }
 
 .article .article-content .article-properties {
-  padding: 20px;
   margin-bottom: 8vh;
+}
+
+.article .article-content .article-properties .download-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #FF2E2E;
+  border-radius: 12px;
+  text-decoration: none;
+  padding: 12px 15px;
+  margin-top: 10px;
+}
+
+.article .article-content .article-properties .download-btn.github {
+  background-color: #201c22;
+}
+
+.article .article-content .article-properties .download-btn p {
+  color: #FFFCF9 !important;
+  margin: 0;
+}
+
+.article .article-content .article-properties .download-btn svg {
+  height: 35px;
+}
+
+@media (max-width: 350px) {
+  .article .article-content .article-properties .download-btn svg {
+    display: none;
+  }
+}
+
+.article .article-content .article-properties .article-properties-container {
+  padding: 20px;
   border-radius: 12px;
   background-color: #edecee;
 }
 
-.article .article-content .article-properties .download-btn {
-  display: block;
-  text-align: center;
-  background-color: #FF2E2E;
-  border-radius: 12px;
-  color: #FFFCF9;
-  text-decoration: none;
-  padding: 12px 15px;
-}
-
-.article .article-content .article-properties ul {
+.article .article-content .article-properties .article-properties-container ul {
   list-style: none;
   margin-left: 0;
   line-height: 1.8rem;
 }
 
-.article .article-content .article-properties p:not(.title), .article .article-content .article-properties li {
+.article .article-content .article-properties .article-properties-container p:not(.title), .article .article-content .article-properties .article-properties-container li {
   color: #625966;
   font-size: 18px;
 }
 
-.article .article-content .article-properties p {
+.article .article-content .article-properties .article-properties-container p {
   margin: 0;
 }
 
-.article .article-content .article-properties p:not(.title):not(:last-child), .article .article-content .article-properties ul:not(:last-child) {
+.article .article-content .article-properties .article-properties-container p:not(.title):not(:last-child), .article .article-content .article-properties .article-properties-container ul:not(:last-child) {
   margin-bottom: 25px;
 }
 
-.article .article-content .article-properties p.title {
+.article .article-content .article-properties .article-properties-container p.title {
   font-weight: bold;
 }
 
-.article .article-content .article-properties .article-prop-col {
+.article .article-content .article-properties .article-properties-container .article-prop-col {
   min-width: 45%;
 }
 
