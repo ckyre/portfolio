@@ -68,9 +68,10 @@
   text-decoration: underline;
 }
 
-.landing .actions-container .cv-link img {
+.landing .actions-container .cv-link svg {
+  width: 1.5rem;
   height: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 .landing .actions-container .cta {
@@ -134,7 +135,7 @@
   transition: background-color 0.3s;
 }
 
-.close img {
+.close svg {
   position: absolute;
   top: 50%;
   left: 50%;
