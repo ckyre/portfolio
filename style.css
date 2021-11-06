@@ -65,13 +65,21 @@
 
 .landing .actions-container .cv-link {
   color: #201c22;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .landing .actions-container .cv-link svg {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 1.5rem;
+}
+
+.landing .actions-container .cv-link p span {
+  font-size: 1rem;
+}
+
+.landing .actions-container .cv-link:hover p {
+  text-decoration: underline;
 }
 
 .landing .actions-container .cta {
@@ -179,6 +187,10 @@
   background-color: #201c22;
 }
 
+.article .article-content .article-properties .download-btn:hover p {
+  text-decoration: underline;
+}
+
 .article .article-content .article-properties .download-btn p {
   color: #FFFCF9 !important;
   margin: 0;
@@ -268,6 +280,49 @@
 
 .article .article-content a.no-margin, .article .article-content p.no-margin, .article .article-content h3.no-margin, .article .article-content img.no-margin, .article .article-content iframe.no-margin {
   margin: 0 !important;
+}
+
+.article .article-content .pdf {
+  border: solid 1px grey;
+  border-radius: 12px;
+  margin-bottom: 3vh;
+  background-color: #f1eeec;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.article .article-content .pdf:hover strong {
+  text-decoration: underline;
+}
+
+.article .article-content .pdf:hover svg {
+  opacity: 1;
+}
+
+.article .article-content .pdf a {
+  padding: 15px 40px;
+  color: #201c22;
+  text-decoration: none;
+}
+
+.article .article-content .pdf a .pdf-desc img {
+  width: 10%;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+.article .article-content .pdf a .pdf-desc strong {
+  font-size: 1.3rem;
+}
+
+.article .article-content .pdf a .pdf-desc p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.article .article-content .pdf a svg {
+  opacity: 0.8;
+  width: 35px;
 }
 
 .project-link {

@@ -109,6 +109,19 @@ articlesDB.push(new Article(
     les systèmes du jeu (à l'exception de l'interface), il était donc normal que je 
     commence par celle-ci.</p>
 
+    <div class="pdf">
+        <a href="assets/documents/GDD-Pretty-Little-Fears-Gabriel-ROULEAU.pdf" class="flex center space-between">
+            <div class="pdf-desc flex center">
+                <img src="assets/images/previews/gdd-pretty-little-fears.png">
+                <div>
+                    <strong>Lire le GDD</strong>
+                    <p>1.71 Mo</p>
+                </div>
+            </div>
+            <svg viewBox="0 0 314 314" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="15.5" y1="168.5" x2="15.5" y2="296.5" stroke="#352D39" stroke-width="31" stroke-linecap="round"/><line x1="156.5" y1="15.5" x2="156.5" y2="215.5" stroke="#352D39" stroke-width="31" stroke-linecap="round"/><line x1="90.2533" y1="151.333" x2="154.333" y2="215.413" stroke="#352D39" stroke-width="31" stroke-linecap="round"/><line x1="159.333" y1="215.413" x2="223.413" y2="151.333" stroke="#352D39" stroke-width="31" stroke-linecap="round"/><line x1="298.5" y1="168.5" x2="298.5" y2="296.5" stroke="#352D39" stroke-width="31" stroke-linecap="round"/><line x1="15.5" y1="298.5" x2="298.5" y2="298.5" stroke="#352D39" stroke-width="31" stroke-linecap="round"/></svg>
+        </a>
+    </div>
+
     <p>Aussi, <strong>afin de rendre le code extensible</strong> j'ai utilisé un 
     Finite-state Machine pour décrire chaque états du joueur. Cela a facilité 
     l'intégration de tous les systèmes nécessitant de connaitre les états, d'autant 
