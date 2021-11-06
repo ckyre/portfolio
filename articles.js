@@ -34,13 +34,14 @@ articlesDB.push(new Article(
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
     gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <p>Les moteurs de jeux sont des systèmes conséquents, j’implémente régulièrement de nouvelles 
-    fonctionnalités a mon moteur, en C++. En attendant qu'il devienne le prochain moteur de jeu mainstream, voici les 
+    <p>Les moteurs de jeux sont des systèmes conséquents. Ce projet est donc toujours en cours de
+    développement et j’implémente régulièrement de nouvelles fonctionnalités, en C++. 
+    En attendant qu'il devienne le prochain moteur de jeu "mainstream", voici les 
     quelques <strong>fonctionnalités déjà implémentées</strong> :</p>
 
     <ul>
         <li>Un système d’événements et leurs propagations entre les layers de l'application</li>
-        <li>La gestion des inputs et de certains éventements grâce a GLFW</li>
+        <li>La gestion des inputs et de certains événements grâce a GLFW</li>
         <li>Un système de rendu 3D supportant les éléments suivant :
             <ul class="no-margin">
                 <li>Les principaux buffers (vertex, index et frame buffers)</li>
@@ -51,7 +52,7 @@ articlesDB.push(new Article(
                 de quelques flags tel que l'activation du back-face culling</li>
                 <li>Les meshs avec lecture de fichiers grâce à ASSIMP</li>
                 <li>Des shaders dit "Lit" supportant les lumières ambiantes, diffuses 
-                (réflectance lambertienne) et spéculaires (modèle Blinn-Phong). Mais aussi les 
+                (réflectance lambertienne) et spéculaires (modèle Phong). Mais aussi les 
                 textures spéculaires pour masquer certains reflets.</li>
                 <li>Différents types de sources de lumière : point, directional et spot lights</li>
                 <li>Les skybox</li>
@@ -106,11 +107,11 @@ articlesDB.push(new Article(
     <p>Après une phase de réflexion autour des choix de conception du code, 
     j'ai commencé l'intégration par le joueur. Cette classe est au centre de tous 
     les systèmes du jeu (à l'exception de l'interface), il était donc normal que je 
-    commence par là.</p>
+    commence par celle-ci.</p>
 
-    <p>Aussi, <strong>afin de rendre le code extensible</strong> j'ai utilisé une 
+    <p>Aussi, <strong>afin de rendre le code extensible</strong> j'ai utilisé un 
     Finite-state Machine pour décrire chaque états du joueur. Cela a facilité 
-    l'intégration de tous les systèmes nécessitant de connaitre cet état, d'autant 
+    l'intégration de tous les systèmes nécessitant de connaitre les états, d'autant 
     que j'ai doté le joueur d'un Singleton pour faciliter l'ajout de référence vers 
     ce MonoBehaviour.</p>
 
@@ -210,9 +211,9 @@ articlesDB.push(new Article(
     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
     clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <p>Nos réunions hebdomadaires étaient en anglais. J’ai beaucoup progressé depuis 
+    <p>Nos réunions hebdomadaires étaient en anglais à l'oral. J’ai beaucoup progressé depuis 
     cette expérience puisque j'ai régulièrement dû partager mon point de vue et faire 
-    des comptes rendus rendus de mon travail à l'oral aux autres membres.</p>
+    des comptes rendus rendus de mon travail aux autres membres.</p>
 
     <img src="assets/images/projects/mephis.jpg">
 `));
