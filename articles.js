@@ -213,7 +213,7 @@ articlesDB.push(new Article(
 
     <p>Nos réunions hebdomadaires étaient en anglais à l'oral. J’ai beaucoup progressé depuis 
     cette expérience puisque j'ai régulièrement dû partager mon point de vue et faire 
-    des comptes rendus rendus de mon travail aux autres membres.</p>
+    des comptes rendus de mon travail aux autres membres.</p>
 
     <img src="assets/images/projects/mephis.jpg">
 `));
