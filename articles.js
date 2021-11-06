@@ -114,7 +114,7 @@ articlesDB.push(new Article(
             <div class="pdf-desc flex center">
                 <img src="assets/images/previews/gdd-pretty-little-fears.png">
                 <div>
-                    <strong>Lire le GDD</strong>
+                    <strong>Lire le Game Design Document</strong>
                     <p>1.71 Mo</p>
                 </div>
             </div>
