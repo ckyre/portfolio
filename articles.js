@@ -110,7 +110,7 @@ articlesDB.push(new Article(
     commence par celle-ci.</p>
 
     <div class="pdf">
-        <a href="assets/documents/GDD-Pretty-Little-Fears-Gabriel-ROULEAU.pdf" class="flex center space-between">
+        <a href="assets/documents/GDD-Pretty-Little-Fears-Gabriel-ROULEAU.pdf" target="_blank" class="flex center space-between">
             <div class="pdf-desc flex center">
                 <img src="assets/images/previews/gdd-pretty-little-fears.png">
                 <div>
