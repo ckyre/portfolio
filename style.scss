@@ -231,6 +231,17 @@ p {
     }
 }
 
+.article-properties {
+    iframe {
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+
+    #ytb {
+        height: calc((38.75vw - 160px) * 0.78);
+    }
+}
+
 .project-link {
     width: 100%;
     height: 100%;
@@ -259,15 +270,24 @@ p {
         .project-tags {
             color: $lightGrey !important;
             pointer-events: none;
-
             
             &::selection {
                 background-color: transparent;
                 color: $lightGrey;
             }
         }
+    } 
+}
+
+.article-properties {
+    iframe {
+        width: 100%;
+        margin-bottom: 3vh;
     }
-    
+
+    #ytb {
+        height: calc((38.75vw - 160px) * 0.78);
+    }
 }
 
 /***************PORTRAIT******************/
@@ -451,17 +471,6 @@ p {
             @media (min-width: 2000px) {
                 margin-top: 190px;
                 padding: 0px 150px;
-            }
-
-            .article-properties {
-                iframe {
-                    width: 100%;
-                    margin-bottom: 3vh;
-                }
-        
-                #ytb {
-                    height: calc((38.75vw - 160px) * 0.78);
-                }
             }
             
             .header {
