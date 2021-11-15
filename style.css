@@ -1,5 +1,3 @@
-/***************VARIABLES******************/
-/***************COMPONENTS******************/
 @font-face {
   font-family: "Poppins";
   src: url(assets/fonts/Poppins-Regular.ttf);
@@ -11,21 +9,6 @@
   font-family: "Poppins";
   src: url(assets/fonts/Poppins-Bold.ttf);
   font-weight: bold;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(assets/fonts/Poppins-Light.ttf);
-  font-weight: 100;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(assets/fonts/Poppins-Italic.ttf);
-  font-weight: normal;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -51,71 +34,21 @@
   }
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  color: #FFFCF9;
-  background-color: #FFFCF9;
-}
-
-h1 {
-  font-family: 'Poppins';
-  font-size: 72px;
-  line-height: 80px;
-  color: #352D39;
-}
-
-h2 {
-  font-family: 'Poppins';
-  font-size: 46px;
-  color: #352D39;
-}
-
-h3 {
-  font-family: 'Poppins';
-  font-size: 36px;
-  color: #352D39;
-}
-
-p {
-  font-family: 'Poppins';
-  font-size: 20px;
-  color: #352D39;
-}
-
-p .desc {
-  color: #625966;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex.center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex.space-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.flex.space-around {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 /***************COMMON******************/
+.credits {
+  font-size: 1rem;
+  background-color: #FF2E2E;
+  text-align: center;
+  color: #8d1616;
+  padding-bottom: 20px;
+}
+
+@media (orientation: portrait) {
+  .credits {
+    display: none;
+  }
+}
+
 .landing {
   width: 100%;
   -webkit-transition: opacity 0.2s;
@@ -131,13 +64,22 @@ p .desc {
 }
 
 .landing .actions-container .cv-link {
-  color: #352D39;
-  text-decoration: underline;
+  color: #201c22;
+  text-decoration: none;
 }
 
-.landing .actions-container .cv-link img {
+.landing .actions-container .cv-link svg {
+  width: 1.5rem;
   height: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
+}
+
+.landing .actions-container .cv-link p span {
+  font-size: 1rem;
+}
+
+.landing .actions-container .cv-link:hover p {
+  text-decoration: underline;
 }
 
 .landing .actions-container .cta {
@@ -194,14 +136,14 @@ p .desc {
   width: 45px;
   height: 45px;
   border-radius: 1000px;
-  background-color: #352D39;
+  background-color: #201c22;
   border: none;
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-.close img {
+.close svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,34 +162,80 @@ p .desc {
 }
 
 .article .article-content .article-properties {
-  padding: 20px;
   margin-bottom: 8vh;
-  border-radius: 10px;
+}
+
+.article .article-content .article-properties .download-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #FF2E2E;
+  border-radius: 12px;
+  text-decoration: none;
+  padding: 12px 15px;
+  margin-top: 10px;
+}
+
+.article .article-content .article-properties .download-btn.github {
+  background-color: #201c22;
+}
+
+.article .article-content .article-properties .download-btn:hover p {
+  text-decoration: underline;
+}
+
+.article .article-content .article-properties .download-btn p {
+  color: #FFFCF9 !important;
+  margin: 0;
+}
+
+.article .article-content .article-properties .download-btn svg {
+  height: 35px;
+}
+
+@media (max-width: 350px) {
+  .article .article-content .article-properties .download-btn svg {
+    display: none;
+  }
+}
+
+.article .article-content .article-properties .article-properties-container {
+  padding: 20px;
+  border-radius: 12px;
   background-color: #edecee;
 }
 
-.article .article-content .article-properties ul {
+.article .article-content .article-properties .article-properties-container ul {
   list-style: none;
+  margin-left: 0;
+  line-height: 1.8rem;
 }
 
-.article .article-content .article-properties p:not(.title), .article .article-content .article-properties li {
+.article .article-content .article-properties .article-properties-container p:not(.title), .article .article-content .article-properties .article-properties-container li {
   color: #625966;
   font-size: 18px;
 }
 
-.article .article-content .article-properties p {
+.article .article-content .article-properties .article-properties-container p {
   margin: 0;
 }
 
-.article .article-content .article-properties p:not(.title):not(:last-child), .article .article-content .article-properties ul:not(:last-child) {
+.article .article-content .article-properties .article-properties-container p:not(.title):not(:last-child), .article .article-content .article-properties .article-properties-container ul:not(:last-child) {
   margin-bottom: 25px;
 }
 
-.article .article-content .article-properties p.title {
+.article .article-content .article-properties .article-properties-container p.title {
   font-weight: bold;
 }
 
-.article .article-content .article-properties .article-prop-col {
+.article .article-content .article-properties .article-properties-container .article-prop-col {
   min-width: 45%;
 }
 
@@ -269,8 +257,72 @@ p .desc {
   margin-bottom: 3vh;
 }
 
+.article .article-content ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 15px;
+  line-height: 2.3rem;
+}
+
+.article .article-content ul:not(.no-margin) {
+  margin-bottom: 3vh;
+}
+
+.article .article-content ul li {
+  font-size: 20px;
+  color: #201c22;
+}
+
+.article .article-content ul li ul {
+  list-style: circle;
+  margin-left: 28px;
+}
+
 .article .article-content a.no-margin, .article .article-content p.no-margin, .article .article-content h3.no-margin, .article .article-content img.no-margin, .article .article-content iframe.no-margin {
   margin: 0 !important;
+}
+
+.article .article-content .pdf {
+  border: solid 1px grey;
+  border-radius: 12px;
+  margin-bottom: 3vh;
+  background-color: #f1eeec;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.article .article-content .pdf:hover strong {
+  text-decoration: underline;
+}
+
+.article .article-content .pdf:hover svg {
+  opacity: 1;
+}
+
+.article .article-content .pdf a {
+  padding: 15px 40px;
+  color: #201c22;
+  text-decoration: none;
+}
+
+.article .article-content .pdf a .pdf-desc img {
+  width: 10%;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+.article .article-content .pdf a .pdf-desc strong {
+  font-size: 1.3rem;
+}
+
+.article .article-content .pdf a .pdf-desc p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.article .article-content .pdf a svg {
+  opacity: 0.8;
+  width: 35px;
 }
 
 .project-link {
@@ -288,7 +340,7 @@ p .desc {
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
   background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .project-link .project-content .project-title {
@@ -396,7 +448,7 @@ p .desc {
     list-style-type: none;
   }
   .right .projects .projects-list .project {
-    border-radius: 10px;
+    border-radius: 12px;
   }
   .right .projects .projects-list .project .project-link {
     width: 100%;
@@ -412,7 +464,7 @@ p .desc {
     -webkit-transition: background-color 0.4s;
     transition: background-color 0.4s;
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    border-radius: 12px;
   }
   .right .projects .projects-list .project .project-link .project-content .project-title {
     color: #FFFCF9;
@@ -453,21 +505,28 @@ p .desc {
     top: 0;
     left: 0;
     width: 50vw;
-    max-height: 100vh;
+    height: 100vh;
     overflow: scroll;
     background-color: #FFFCF9;
   }
   .left .landing {
-    height: calc(100vh - 140px);
-    margin-top: 140px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 100%;
     padding: 0px 100px;
+  }
+  .left .landing h1 {
+    font-size: 52px;
   }
 }
 
 @media (orientation: landscape) and (min-width: 2000px) {
   .left .landing {
-    margin-top: 220px;
     padding: 0px 200px;
+  }
+  .left .landing h1 {
+    font-size: 72px;
   }
 }
 
@@ -499,12 +558,12 @@ p .desc {
 }
 
 @media (orientation: landscape) {
-  .left .article .article-properties iframe {
+  .left .article .article-content iframe {
     width: 100%;
     margin-bottom: 3vh;
   }
-  .left .article .article-properties #ytb {
-    height: calc((38.75vw - 160px) * 0.78);
+  .left .article .article-content #ytb {
+    height: calc((38.75vw - 160px) * 0.68);
   }
   .left .article .header {
     margin-bottom: 6vh;
@@ -520,49 +579,40 @@ p .desc {
   }
   .right ::-moz-selection {
     background-color: #FFFCF9;
-    color: #352D39;
+    color: #201c22;
   }
   .right ::selection {
     background-color: #FFFCF9;
-    color: #352D39;
+    color: #201c22;
   }
   .right .landing {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 92vh;
     background-color: #FFFCF9;
   }
   .right .landing img {
     display: block;
-    height: 60%;
+    width: 60%;
     position: absolute;
-    top: 140px;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border-radius: 12px;
   }
-}
-
-@media (orientation: landscape) and (min-width: 2000px) {
-  .right .landing img {
-    top: 190px;
-  }
-}
-
-@media (orientation: landscape) {
   .right .projects {
     width: 100%;
     min-height: 100vh;
     padding: 100px 80px;
     background-color: #FF2E2E;
-    border-radius: 10px 0 0 0;
+    border-radius: 12px 0 0 0;
   }
 }
 
 @media (orientation: landscape) and (min-width: 2000px) {
   .right .projects {
-    padding: 150px 150px;
+    padding: 100px 150px;
   }
 }
 
@@ -586,7 +636,7 @@ p .desc {
   .right .projects .projects-list .project {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     background-size: cover;
   }

@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Regular.ttf);
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(assets/fonts/Poppins-Bold.ttf);
+  font-weight: bold;
+  font-display: swap;
+}
+
+body {
+  background-color: #FFFCF9;
+}
+
+header {
+  width: 100%;
+  padding: 80px 25vw;
+}
+
+@media (min-width: 515px) {
+  header {
+    background-image: url("../assets/images/banner.png");
+    background-size: 100% auto;
+    background-position: 50% 50%;
+  }
+  header h2, header p {
+    background-color: #201c22;
+    border-radius: 12px;
+    color: #FFFCF9;
+    padding: 0px 20px;
+  }
+  header p {
+    margin-top: 15px;
+    padding: 10px 20px;
+  }
+}
+
+header h2, header p {
+  display: inline-block;
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 80px 5vw;
+    background-size: auto 100%;
+  }
+}
+
+@media (max-width: 515px) {
+  header {
+    background-image: none;
+    background-color: #FF2E2E;
+  }
+  header ::-moz-selection {
+    background-color: #201c22;
+    color: #FFFCF9;
+  }
+  header ::selection {
+    background-color: #201c22;
+    color: #FFFCF9;
+  }
+  header .flex {
+    display: block;
+  }
+  header .flex img {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  header .flex h2, header .flex p {
+    color: #FFFCF9;
+  }
+}
+
+header img {
+  height: 180px;
+  border-radius: 12px;
+  margin-right: 50px;
+}
+
+a {
+  font: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.links-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 60px 25vw;
+}
+
+@media (max-width: 650px) {
+  .links-container {
+    padding: 60px 5vw;
+  }
+}
+
+.links-container ul li {
+  display: inline-block;
+  background-color: #201c22;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 515px) {
+  .links-container ul li {
+    display: block;
+  }
+}
+
+.links-container ul li svg {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+}
+
+.links-container ul li a {
+  padding: 15px;
+}
+
+.links-container ul li p {
+  color: #FFFCF9;
+  margin-right: 5px;
+}
+
+.links-container ul li:hover {
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */
