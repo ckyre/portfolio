@@ -177,7 +177,7 @@ articlesDB.push(new Article(
     au centre des décisions de conception que nous avons réussi à tenir ce que nous avions prévu.</p>
 
     <p>Travailler en équipe fut très agréable car j'ai pu me concentrer sur ce qui avait vraiment de l'impact 
-    sur l'expérience du joueur. En tant que lead programmer, j'ai pu <strong>prenre le temps peaufiner</strong> les contrôles et 
+    sur l'expérience du joueur. En tant que lead programmer, j'ai pu <strong>prendre le temps de peaufiner</strong> les contrôles et 
     les feedbacks du joueur. Un luxe que je m'accorderais volontiers pour les prochaines gam jam.</p>
 
     <img src="assets/images/projects/akagani-gameplay.gif">
