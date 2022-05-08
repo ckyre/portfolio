@@ -1,13 +1,12 @@
 /****************** 1 **********************/
 articlesDB.push(new Article(
-    "Brio, mon moteur de jeu", `
+    "Mon moteur 3D", `
     <div class="article-properties">
         <div class="flex space-between article-properties-container">
             <div class="article-prop-col">
                 <p class="title">Rôles</p>
                 <ul>
                     <li>Programmation 3D</li>
-                    <li>Programmation moteur</li>
                 </ul>
                 <p class="title">Taille de l'équipe</p>
                 <p>Seul</p>
@@ -15,7 +14,7 @@ articlesDB.push(new Article(
             <div class="article-prop-col">
                 <p class="title">Outils</p>
                 <ul>
-                    <li>VS Community</li>
+                    <li>Visual Studio</li>
                     <li>Git</li>
                     <li>Premake</li>
                 </ul>
