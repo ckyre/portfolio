@@ -1,3 +1,4 @@
 baseURL = 'http://gabrielrouleau.fr/'
-languageCode = 'fr-FR'
 title = 'Portfolio de Gabriel ROULEAU'
+languageCode = 'fr-FR'
+defaultContentLanguage = 'fr'
